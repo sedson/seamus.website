@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div Tree</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+    }
+
+    body {
+      width: 100px;
+      height: 100px;
+      /* border: 1px solid pink; */
+    }
+
+    .cell {
+      display: inline-block;
+    }
+
+    .cell>.inner {
+      background-color: black;
+      /* border: 1px solid hotpink; */
+      border-radius: 50%;
+      margin: 0.5px;
+      width: calc(100% - 1px);
+      height: calc(100% - 1px);
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const cell = (w, h) => {
+      let c = document.createElement('div');
+      c.classList.add('cell');
+      c.child = document.createElement('div');
+      c.child.classList.add('inner')
+      c.append(c.child);
+      c.info = {
+        w: w, h: h,
+      }
+
+      c.child.onclick = (e) => divide(e);
+
+      c.style.width = w + '%';
+      c.style.height = h + '%';
+
+      let g = Math.random();
+
+      // if (g < 0.34) c.child.style.backgroundColor = p.a.string;
+      // else if (g < 0.66) c.child.style.backgroundColor = p.b.string;
+      // else c.child.style.backgroundColor = p.c.string;
+
+      // c.child.style.backgroundColor = '#' + r();
+      return c;
+    }
+
+    const divide = (e) => {
+      const c = e.target.parentNode;
+
+      const rect = c.getBoundingClientRect();
+
+      const x = e.clientX;
+      const y = e.clientY;
+
+      const xP = Math.floor(100 * (x - rect.left) / rect.width);
+      const yP = Math.floor(100 * (y - rect.top) / rect.height);
+
+
+      const a = Math.random();
+      // const b = Math.floor(Math.random() * 50) + 25;
+      const b = (Math.floor(Math.random() * 3) + 1) * 25;
+
+      if (a > 0.5) {
+        if (c.child) {
+          c.child.remove();
+          c.append(cell(xP, 100), cell(100 - xP, 100));
+        }
+      } else {
+        if (c.child) {
+          c.child.remove();
+          c.append(cell(100, yP), cell(100, 100 - yP));
+
+        }
+      }
+
+
+    }
+
+
+    document.body.append(cell(100, 100));
+
+
+
+
+  </script>
+
+</body>
+
+
+
+</html>

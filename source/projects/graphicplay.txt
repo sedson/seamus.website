@@ -1,0 +1,22 @@
+---
+title: Graphic Play
+year: 2018
+medium: wood, newsprint, ink, mixed media
+short: A printmaking toy
+publish: true
+color: red
+---
+
+div @column
+A printmaking toy. Wooden blocks can be arranged using a peg-board grid, inked, and printed on a letterpress. The system seeks a balance between the structure of the grid and the looseness of hands-on play. 
+/div
+
+div @column.gallery.full
+IMG /img/thesis/thesis1.jpg
+IMG /img/thesis/kiddos.jpg
+IMG /img/thesis/thesis4.jpg
+IMG /img/thesis/parts2.jpg
+IMG /img/thesis/kiddos4.jpg
+IMG /img/thesis/thesis6.jpg
+IMG /img/thesis/TheisBookGIF.gif
+/div

@@ -1,0 +1,71 @@
+/*  
+https://d2w9rnfcy7mm78.cloudfront.net/12946614/original_023cd1156b24a8fe28641cf327e33877.jpg?1629873894?bc=0
+*/
+
+:root {
+  --mint:         #b2e1d2;
+  --orange:       #ff8c00;
+  --sand:         #e8e1d6;
+  --gray:         #b8bbb5;
+  --ginger:       #cd9a62;
+  --vert:         #006922;
+  --melon:        #f3c1aa;
+  --red:          #e54127;
+  --lime:         #d8eb27;
+  --turquoise:    #007b82;
+  --blue:         #2311e4;
+  --burgundy:     #5e183b;
+  --lilac:        #bdbdf7;
+  --forest:       #003c38;
+  --rose:         #f892c5;
+  --mango:        #ffc20e;
+  --chocolate:    #945526;
+  --raspberry:    #b7274d;
+  --sky:          #78c5f8;
+  --black:        #000000;
+  --white:        #f6f2eA;
+}
+
+.mint { color: var(--mint); }
+.orange { color: var(--orange); }
+.sand { color: var(--sand); }
+.gray { color: var(--gray); }
+.ginger { color: var(--ginger); }
+.vert { color: var(--vert); }
+.melon { color: var(--melon); }
+.red { color: var(--red); }
+.lime { color: var(--lime); }
+.turquoise { color: var(--turquoise); }
+.blue { color: var(--blue); }
+.burgundy { color: var(--burgundy); }
+.lilac { color: var(--lilac); }
+.forest { color: var(--forest); }
+.rose { color: var(--rose); }
+.mango { color: var(--mango); }
+.chocolate { color: var(--chocolate); }
+.raspberry { color: var(--raspberry); }
+.sky { color: var(--sky); }
+.black { color: var(--black); }
+.white { color: var(--white); }
+
+.bg-mint { background-color: var(--mint); }
+.bg-orange { background-color: var(--orange); }
+.bg-sand { background-color: var(--sand); }
+.bg-gray { background-color: var(--gray); }
+.bg-ginger { background-color: var(--ginger); }
+.bg-vert { background-color: var(--vert); }
+.bg-melon { background-color: var(--melon); }
+.bg-red { background-color: var(--red); }
+.bg-lime { background-color: var(--lime); }
+.bg-turquoise { background-color: var(--turquoise); }
+.bg-blue { background-color: var(--blue); }
+.bg-burgundy { background-color: var(--burgundy); }
+.bg-lilac { background-color: var(--lilac); }
+.bg-forest { background-color: var(--forest); }
+.bg-rose { background-color: var(--rose); }
+.bg-mango { background-color: var(--mango); }
+.bg-chocolate { background-color: var(--chocolate); }
+.bg-raspberry { background-color: var(--raspberry); }
+.bg-sky { background-color: var(--sky); }
+.bg-black { background-color: var(--black); }
+.bg-white { background-color: var(--white); }

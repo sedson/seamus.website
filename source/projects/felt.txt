@@ -1,0 +1,13 @@
+---
+title: Felt
+short: A 3D toolkit
+color: mango
+year: 2023
+publish: true
+medium: JavaScript, WebGL
+---
+
+A prototype for a WebGL tool. Currently very much a work in progress. More soon!
+
+IMG /img/felt.gif
+
