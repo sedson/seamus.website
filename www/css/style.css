@@ -4,11 +4,13 @@
   font-family: Switzer;
   src: url(/fonts/Switzer-Regular.woff);
 }
+
 @font-face {
   font-family: Switzer;
   src: url(/fonts/Switzer-Semibold.woff);
   font-weight: bold;
 }
+
 @font-face {
   font-family: 'Computer Modern Typewriter';
   src: url(/fonts/cmuntt.woff);
@@ -40,29 +42,22 @@ body {
 header {
   margin: -0.5rem;
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
 
 nav ul {
   list-style: none;
   display: flex;
   padding-bottom: 0.5rem;
   justify-content: space-between;
-  /* border-bottom: 1px dashed var(--gray); */
 }
 
 nav li {
   display: inline-block;
-  /* margin-right: 0.5em; */
-  /* font-weight: bold; */
-  /* background-color: var(--melon); */
-  /* margin-right: 1em; */
-  /* text-decoration: underline; */
 }
 
-nav li:hover a {
-  color: var(--vert);
+nav li:hover {
+  background-color: var(--sand);
 }
 
 nav a {
@@ -103,7 +98,7 @@ h1 {
 
 footer {
   position: fixed;
-  width: 100vw;
+  width: calc(100vw - 1rem);
   bottom: 0;
   left: 0;
   padding: 0.5rem;
@@ -133,6 +128,7 @@ footer a {
   margin-top: -1px;
   padding: 1em 0;
 }
+
 .project-card > * {
   width: 25%;
 }
@@ -151,29 +147,6 @@ hr {
   width: 1em;
 }
 
-.fun {
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  mix-blend-mode: hard-light;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fun > div {
-  border-radius: 100%;
-  width: calc(min(100vw, 100vh) - 20rem);
-  height: calc(min(100vw, 100vh) - 20rem);
-  background-color: var(--vert);
-}
-
 .swatch {
   display: inline-block;
   width:  0.7rem;
@@ -182,23 +155,8 @@ hr {
   border-radius: 100%;
 }
 
-.right {
-  position: absolute;
-  right: 1rem;
-}
-
 .small {
   font-size: 0.8rem;
-}
-
-.background-gradient {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  z-index: 10;
-  pointer-events: none;
 }
 
 img {
@@ -213,15 +171,10 @@ img.small {
 img.tiny {
   width: calc(12.5% - .25rem);
 }
+
 img.full {
   width: 100%
 }
-
-
-.multiply {
-  /* mix-blend-mode: multiply; */
-}
-
 
 .gallery {
   display: flex;
@@ -235,15 +188,14 @@ img.full {
   flex-flow: row wrap;
   padding-left: 1px;
 }
+
 .card {
   flex-shrink: 0;
   width: 50%;
   min-height: 240px;
-  /* max-width: 400px; */
   margin-left: -1px;
   margin-top: -1px;
   border: 1px solid var(--gray);
-  /* background-color: var(--sand); */
   padding: 0.5rem;
 }
 
@@ -260,17 +212,21 @@ img.full {
   border: 1px dashed gray;
   padding: 0.5rem;
 }
+
 .post img {
   width: 100%;
 }
 
-
 @media only screen and (max-width: 600px) {
   .project-card {
-      align-items: baseline;
-      flex-flow: row wrap;
-      justify-content: space-between;
-    }
+    align-items: baseline;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .post {
+    max-width: unset;
+  }
   
   .project-card > * {
     width: 50%;
@@ -281,5 +237,11 @@ img.full {
 
   img, img.small {
     width: 100%;
+  }
+
+  footer {
+    position: relative;
+    padding: 0;
+    margin-top: 3rem;
   }
 }
