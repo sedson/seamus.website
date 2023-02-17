@@ -53,7 +53,10 @@ const template = file => compileTemplate(read(file));
  * @param {string} file
  * @returns {String}
  */
-const getDateFormat = (date = new Date()) => {
+const getDateFormat = (date) => {
+  if (!date) {
+    date = new Date();
+  }
   const format = { year: 'numeric', month: 'long', day: 'numeric' };
   return date.toLocaleDateString(undefined, format);
 }
@@ -163,11 +166,12 @@ const getDateFormat = (date = new Date()) => {
 
   for (let file of feedFiles) {
     const stats = fs.statSync('www/img/feed/' + file);
+    const postDate = getDateFormat(stats.birthtime);
     posts.push(t_post({
       index,
       src: '/img/feed/' + file,
       filename: file,
-      date: getDateFormat(stats.birthTime)
+      date: postDate,
     }));
     index -= 1;
   }

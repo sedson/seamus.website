@@ -39,6 +39,13 @@ body {
   font-family: var(--sans);
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--black);
+    color: var(--sand)
+  }
+}
+
 header {
   margin: -0.5rem;
   padding: 0.5rem;
@@ -121,7 +128,7 @@ footer a {
 
 .project-card {
   width: 100%;
-  border-bottom: 1px dashed var(--gray);
+  border-bottom: 1px dashed rgba(128,128,128, 0.4);
   display: flex;
   align-items: baseline;
   flex-flow: row;
@@ -195,7 +202,7 @@ img.full {
   min-height: 240px;
   margin-left: -1px;
   margin-top: -1px;
-  border: 1px solid var(--gray);
+  border: 1px solid rgba(128, 128, 128, 0.4);
   padding: 0.5rem;
 }
 
@@ -209,7 +216,7 @@ img.full {
   min-height: 300px;
   margin-top: -1px;
   margin-left: -1px;
-  border: 1px dashed gray;
+  border: 1px dashed rgba(128, 128, 128, 0.4);
   padding: 0.5rem;
 }
 
