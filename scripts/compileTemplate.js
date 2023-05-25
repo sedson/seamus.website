@@ -9,7 +9,7 @@ module.exports = compileTemplate;
  * Convert a text form template into the function that renders that template.
  * 
  */
-function compileTemplate(text) {
+function compileTemplate (text) {
   return toFunction(parseText(text));
 }
 
@@ -44,11 +44,6 @@ function parseText (template) {
 
   if (template) output.push(template);
   return output;
-}
-
-
-const fn = (data) => {
-  const verfify = name => data[name] ? data[name] : '';
 }
 
 
