@@ -24,7 +24,7 @@
 }
 
 :root {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
   --sans: Switzer, Arial, sans-serif;
   --mono: 'Computer Modern Typewriter', monospace;
@@ -32,18 +32,15 @@
 }
 
 body {
-  padding: 0.5rem;
+  padding: 1rem;
   text-rendering: optimizeLegibility;
-  background-color: var(--white);
+  background-color: silver;
   color: var(--black);
   font-family: var(--sans);
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--black);
-    color: var(--sand)
-  }
+
 }
 
 header {
@@ -73,7 +70,7 @@ nav a {
 }
 
 a {
-  color: unset;
+  color: blue;
   text-decoration: underline;
   line-height: 1em;
 }
@@ -90,8 +87,8 @@ a.external::after {
 }
 
 p {
-  max-width: 55ch;
-  margin-bottom: 1.25rem;
+  max-width: 50ch;
+  margin-bottom:;
 }
 
 em {
@@ -104,21 +101,20 @@ h1 {
 }
 
 footer {
-  position: fixed;
-  width: calc(100vw - 1rem);
+/*  position: fixed;*/
+/*  width: calc(100vw - 1rem);*/
   bottom: 0;
   left: 0;
-  padding: 0.5rem;
 }
 
 footer p {
-  font-size: 0.8rem;
+/*  font-size: 0.8rem;*/
   margin-bottom: 0;
   max-width: none;
 }
 
 footer a {
-  color: unset;
+  color: blue;
   font-size: unset;
 }
 
@@ -249,6 +245,5 @@ img.full {
   footer {
     position: relative;
     padding: 0;
-    margin-top: 3rem;
   }
 }
