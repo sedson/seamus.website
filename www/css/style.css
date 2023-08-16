@@ -24,7 +24,7 @@
 }
 
 :root {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
   --sans: Switzer, Arial, sans-serif;
   --mono: 'Computer Modern Typewriter', monospace;
@@ -32,11 +32,18 @@
 }
 
 body {
-  padding: 1rem;
   text-rendering: optimizeLegibility;
-  background-color: silver;
-  color: var(--black);
+  background-color: whitesmoke;
+  color: olivedrab;
   font-family: var(--sans);
+  padding: 1rem;
+}
+
+.content {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +54,15 @@ header {
   margin: -0.5rem;
   padding: 0.5rem;
   margin-bottom: 3rem;
+}
+.box {
+  height: auto;
+  width: 33.333%;
+  border: 1px solid olivedrab;
+  margin-top: -1px;
+  margin-left: -1px;
+  padding: 0.5em;
+  transition: background-color 1s ease;
 }
 
 nav ul {
@@ -70,7 +86,7 @@ nav a {
 }
 
 a {
-  color: blue;
+  color: unset;
   text-decoration: underline;
   line-height: 1em;
 }
@@ -87,7 +103,7 @@ a.external::after {
 }
 
 p {
-  max-width: 50ch;
+/*  max-width: 50ch;*/
   margin-bottom:;
 }
 
@@ -220,7 +236,10 @@ img.full {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .box {
+    width: 50%;
+  }
   .project-card {
     align-items: baseline;
     flex-flow: row wrap;
@@ -245,5 +264,10 @@ img.full {
   footer {
     position: relative;
     padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .box {
+    width: 100%;
   }
 }

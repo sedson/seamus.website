@@ -112,6 +112,7 @@ const getDateFormat = (date) => {
     write('www/' + slug + '/index.html', t_page({
       header,
       footer, 
+      date,
       title: project.title,
       body: t_projectPage(project)
     }));
@@ -130,8 +131,10 @@ const getDateFormat = (date) => {
   write('www/index.html', t_page({
     header,
     footer,
+    date,
     title: 'Seamus Edson',
     body: t_homePage({
+      date,
       projects: projects
     })
   }));
