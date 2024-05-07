@@ -1,7 +1,21 @@
-<div class="swatch bg-sky"></div>
-<h1>feed</h1>
-<p>Works in progress, small projects, sketches, screenshots, etc.</p>
-<hr>
-<div class="flex-container">
-  {{ posts }}
+<div class="flex-container start">
+{{ posts }}  
 </div>
+
+<div class="fs-blocker" style="display:none"></div>
+
+<template id="post-full">
+  <div class="post-full scrollable">
+    <div class="flex-row small">
+      <span id="post-id" class="fade"></span>
+      <a href="#" class="button close-button">{{ close }}</a>
+    </div>
+    <div style="height: 1rem"></div>
+    <h1 id="post-title"></h1>
+    <p class="small fade" id="post-date"></p>
+    <div style="height: 1rem"></div>
+    <div id="post-content" class="post-content"></div>
+  </div>
+</template>
+
+<script type="text/javascript" src="/js/feed.js"></script>

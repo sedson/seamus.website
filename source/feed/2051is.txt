@@ -1,0 +1,11 @@
+---
+id: 2051is
+timestamp: Tue May 07 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: CCNYC Graphic
+tags: gum
+publish: true
+thumbnail: /img/feed/ccnyc_5-7_a.png
+---
+
+@small Generative poster for the May 7 meetup of Creative Coding NYC. This one uses textures stretched across cells in a quadtree. 
+IMG /img/feed/ccnyc_5-7_a.png

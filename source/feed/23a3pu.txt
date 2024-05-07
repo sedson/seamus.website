@@ -1,0 +1,10 @@
+---
+id: 23a3pu
+timestamp: Tue Apr 23 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: CCNYC Graphic
+tags: 
+publish: true
+thumbnail: /img/feed/ccnyc_4-23_a.png
+---
+@small Generative poster for the April 23 meetup of Creative Coding NYC.
+IMG /img/feed/ccnyc_4-23_a.png

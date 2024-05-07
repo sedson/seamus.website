@@ -1,0 +1,7 @@
+div @content.g-w-3
+I am currently working on 2 side projects: 
+
+[Gum-https://gum.seamus.website] which is a set of WebGL tools for creating the kinds of visualizations I am interested in.
+
+[SynthKit-https://synthkit.seamus.website] which is for making browser-based music and noise toys.
+/div

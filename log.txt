@@ -1,0 +1,7 @@
+cae49ca Udate css
+a57e89d Simplify, under construction
+1cf627a Little fix
+d08cf2b Adding dark mode media query, post date fix
+a3502a0 Adding readme
+2da3bce Cleanup and css tweaks
+45f11e3 seamus.website is up

@@ -1,0 +1,20 @@
+---
+title: Drawing with Friends
+external-link: https://drawing-with-friends.online
+year: 2021
+short: Collaborative doodling
+publish: true
+type: website
+selected: true
+thumbnail: /img/thumbnails/drawing.png
+description: Collaborative doodling website
+---
+
+div @desc.narrow
+A website for for collaborative doodling. Each visitor selects a crayon color that marks their trail of edits as they remix the collection of drawings.
+
+$ <p><a class="external" href="https://drawing-with-friends.online">visit drawing-with-friends.online</a></p>
+/div 
+
+IMG @half.grow.shadow /img/dwf/drawing1_sm.png
+IMG @wide.shadow /img/dwf/drawing2_sm.png

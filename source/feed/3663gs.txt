@@ -1,0 +1,15 @@
+---
+id: 3663gs
+timestamp: Tue Apr 02 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: Bitmap to SVG type Sketch
+tags: javascript, tool, typography
+publish: true
+thumbnail: /img/feed/pix-to-svg3.png
+---
+
+@small Combining a bitmap font editor with logic for drawing svg elements at pixel locations.
+
+IMG /img/feed/pix-to-svg3.png
+
+IMG /img/feed/pix-to-svg1.png
+IMG /img/feed/pix-to-svg2.png

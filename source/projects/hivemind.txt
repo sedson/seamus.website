@@ -1,0 +1,18 @@
+---
+title: Hivemind
+year: 2022
+type: 3D design
+short: 3D knowledge game
+publish: true
+color: black
+---
+
+div @desc.narrow
+A knowledge game for artists to navigate the inner workings of their practice. View more on [Serpentine's website-https://www.serpentinegalleries.org/whats-on/hivemind/].
+
+For [Serpentine Galleries-https://www.serpentinegalleries.org/]. Game design by [Trust-https://trust.support/]. Game development in Unreal by [Will Freudenheim-https://freudenheim.info]. I worked on the 3D models and visual look development.
+
+/div
+
+IMG @wide.shrink /img/hivemind/hivemind.png
+DUO @full /img/hivemind/models.png

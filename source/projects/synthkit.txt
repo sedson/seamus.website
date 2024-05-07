@@ -1,0 +1,13 @@
+---
+title: SynthKit
+short: WebAudio toolkit
+year: 2023–
+publish: true
+type: code
+---
+
+div @desc.narrow 
+A WebAudio wrapper for making browser music.
+/div
+
+IMG @half.grow.shadow /img/synthkit.png

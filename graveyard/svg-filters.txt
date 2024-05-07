@@ -1,0 +1,42 @@
+Had a cool thing for the sketch book page that used SVG filters to do the duotoning. Abondoned
+because of cross-browser rendering differences that felt impossible to overcome.
+
+
+Inside the markup/template for the sketch book page I had this SVG filter:
+
+```
+<svg width="0" height="0" viewbox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gradient-map" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feComponentTransfer in="SourceGraphic" result="componentTransfer">
+        <feFuncR type="table" tableValues="0 1"/>
+        <feFuncG type="table" tableValues="0 1"/>
+        <feFuncB type="table" tableValues="0 1"/>
+        <feFuncA type="table" tableValues="0 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<script type="text/javascript" src="/js/sketchbook.js"></script>
+```
+
+
+I could select the individal channel components and remap them to new colors 
+like this:
+
+```
+const gradientMap = document.getElementById('gradient-map');
+const rFunc = gradientMap.querySelector('feFuncR');
+const gFunc = gradientMap.querySelector('feFuncG');
+const bFunc = gradientMap.querySelector('feFuncB');
+
+function updateSketchColors() {
+  const fg = parseRgb01(getComputedStyle(document.body).getPropertyValue('color'));
+  const bg = parseRgb01(getComputedStyle(document.body).getPropertyValue('background-color'));
+  console.log(fg, bg)
+  rFunc.setAttribute('tableValues', `${fg[0]} ${bg[0]}`);
+  gFunc.setAttribute('tableValues', `${fg[1]} ${bg[1]}`);
+  bFunc.setAttribute('tableValues', `${fg[2]} ${bg[2]}`);
+}
+
+```

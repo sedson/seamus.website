@@ -1,7 +1,0 @@
----
-title: Drawing with Friends
-link: https://drawing-with-friends.online
-year: 2021
-short: Collaborative doodling
-color: sky
----

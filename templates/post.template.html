@@ -1,4 +1,12 @@
-<div class="post">
-  <p class="caption small">[{{index}}] <em>{{ filename }}</em> ~ added {{ date }}</p>
-  <img src="{{ src }}" alt="" loading="lazy">
+<div class="post fade-background">
+  <div style="width:100%; aspect-ratio: 1; overflow: hidden; margin-bottom: 1rem;">
+    <a href="#{{id}}"><img src="{{ thumbnail }}" loading="lazy"></a>
+  </div>
+  <h3>{{ title }}</h3>
+  <p class="small fade">{{ date }}</p>
+  <div class="flex-row x-small">
+    <span class="fade">{{ id }}</span>
+    <a href="#{{id}}" class="button">VIEW</a>
+  </div>
+  </a>
 </div>

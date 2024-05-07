@@ -9,7 +9,7 @@ module.exports = compileTemplate;
  * Convert a text form template into the function that renders that template.
  * 
  */
-function compileTemplate (text) {
+function compileTemplate(text) {
   return toFunction(parseText(text));
 }
 
@@ -21,7 +21,7 @@ function compileTemplate (text) {
  * @param {string} template The original template string. 
  * @returns {array<string>}
  */
-function parseText (template) {
+function parseText(template) {
   const pattern = '{{(.*?)}}';
   const output = [];
 
@@ -37,7 +37,7 @@ function parseText (template) {
     }
 
     output.push(match[0]);
-    
+
     template = template.slice(match[0].length);
     match = new RegExp(pattern, 'g').exec(template);
   }
@@ -53,17 +53,17 @@ function parseText (template) {
  * @param {array<string>} template The original template string. 
  * @returns {function}
  */
-function toFunction (tokens) {
+function toFunction(tokens) {
   // Replace the identifier characters.
   const clean = str => str.replaceAll(/{|}/g, '').trim();
-  
+
   // Only include items that are defined in the data context.
   const verifier = str => `(data['${str}'] ? data['${str}'] : '')`;
-  
-  const escapeReturn = str => str.replaceAll('\n', `'+ '\\n' + '`);
-  const escapeQuote = str => str.replaceAll(`'`,  `\'`);
 
-  let strings = [`data = data|| {};`, `return ''`];
+  const escapeReturn = str => str.replaceAll('\n', `'+ '\\n' + '`);
+  const escapeQuote = str => str.replaceAll(`'`, `\'`);
+
+  let strings = [`data = data || {};`, `return ''`];
 
   for (let token of tokens) {
     if (token.startsWith('{{') && token.endsWith('}}')) {

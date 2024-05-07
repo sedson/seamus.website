@@ -1,10 +1,21 @@
 <header>
-  <nav>
-    <ul>
-      <li><span class="swatch bg-vert"></span><a href="/">home</a></li>
-      <li><span class="swatch bg-sky"></span><a href="/feed">feed</a></li>
-      <!-- <li><span class="swatch bg-rose"></span><a href="/projects">projects</a></li> -->
-      <li><span class="swatch bg-lilac"></span><a href="/info">info</a></li>
-    </ul>
-  </nav>
+  <div class="flex-row">
+    <div class="flex-row">
+      <a href="/" class="nav-link home">
+        <div class="widget">{{ home }}<span class="widget-tip">home</span></div>
+      </a>
+      <div class="nav">
+        {{ nav }}
+      </div>   
+    </div>
+    <div class="widgets">
+      <div id="toggle-grid" class="widget">{{ toggleGrid }} <span class="widget-tip">toggle grid</span></div>
+      <div id="swap-colors" class="widget">{{ swapColors }}<span class="widget-tip">swap colors</span></div>
+      <div id="random-colors" class="widget">{{ randomColors }}<span class="widget-tip">new colors</span></div>
+      <div id="reset-colors" class="widget">{{ resetColors }}<span class="widget-tip">reset</span></div>
+    </div>
+  </div>
+  <div class="flex-row">
+    <div>{{ pageDescription }}</div>
+  </div>
 </header>

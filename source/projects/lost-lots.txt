@@ -1,0 +1,22 @@
+---
+title: Lost Lots
+year: 2021
+type: videogame
+short: Ecosystem simulator
+publish: true
+---
+
+div @desc.narrow
+
+A tiny-scale gardening toy. Turn abandoned lots into mini ecosystems. Made with Unity.
+
+Get the game at [itch.io-https://rustforms.itch.io/lostlots].
+
+
+With [Rustforms-https://rustforms.net].
+/div
+
+IMG @wide.grow /img/lostlots/LL_2.jpg
+IMG @half.shrink /img/lostlots/LL_4.jpg
+IMG @half.shrink /img/lostlots/LL_5.jpg
+IMG @wide /img/lostlots/LL_6.jpg

@@ -1,0 +1,7 @@
+---
+title: stop.gap
+year: 2021
+type: book design
+short: Design for an arts journal
+publish: false
+---

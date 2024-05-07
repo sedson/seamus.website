@@ -2,37 +2,16 @@
 title: Pilots
 year: 2022
 medium: ink, cardstock
+type: drawing
 short: Sci-fi drawings
 publish: true
-color: black
 ---
 
-A sci-fi world-building experiment. Originals are 4×6 inch ink drawings.
-
-
-div @gallery
-IMG @small.multiply /img/pilots/Pilots_0000_Layer-24.png
-IMG @small.multiply /img/pilots/Pilots_0001_Layer-23.png
-IMG @small.multiply /img/pilots/Pilots_0002_Layer-22.png
-IMG @small.multiply /img/pilots/Pilots_0003_Layer-21.png
-IMG @small.multiply /img/pilots/Pilots_0004_Layer-20.png
-IMG @small.multiply /img/pilots/Pilots_0005_Layer-19.png
-IMG @small.multiply /img/pilots/Pilots_0006_Layer-18.png
-IMG @small.multiply /img/pilots/Pilots_0007_Layer-17.png
-IMG @small.multiply /img/pilots/Pilots_0008_Layer-16.png
-IMG @small.multiply /img/pilots/Pilots_0009_Layer-15.png
-IMG @small.multiply /img/pilots/Pilots_0010_Layer-14.png
-IMG @small.multiply /img/pilots/Pilots_0011_Layer-13.png
-IMG @small.multiply /img/pilots/Pilots_0012_Layer-12.png
-IMG @small.multiply /img/pilots/Pilots_0013_Layer-11.png
-IMG @small.multiply /img/pilots/Pilots_0014_Layer-10.png
-IMG @small.multiply /img/pilots/Pilots_0015_Layer-9.png
-IMG @small.multiply /img/pilots/Pilots_0016_Layer-8.png
-IMG @small.multiply /img/pilots/Pilots_0017_Layer-7.png
-IMG @small.multiply /img/pilots/Pilots_0018_Layer-6.png
-IMG @small.multiply /img/pilots/Pilots_0019_Layer-5.png
-IMG @small.multiply /img/pilots/Pilots_0020_Layer-4.png
-IMG @small.multiply /img/pilots/Pilots_0021_Layer-3.png
-IMG @small.multiply /img/pilots/Pilots_0022_Layer-2.png
-IMG @small.multiply /img/pilots/Pilots_0023_Layer-1.png
+div @desc.narrow
+A series of 24 sci-fi portraits. Ink drawings on 4×6" index cards. Would love to turn these into a generator of some kind.
 /div
+
+DUO-k @wide.grow /img/pilots/pilots.png
+DUO-k @x-narrow.grow /img/pilots/Pilots_0002_Layer-22.png
+DUO-k @x-narrow.grow /img/pilots/Pilots_0010_Layer-14.png
+DUO-k @x-narrow.grow /img/pilots/Pilots_0015_Layer-9.png

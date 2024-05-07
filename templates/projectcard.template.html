@@ -1,8 +1,14 @@
-<div class="project-card">
-  <div class="title">
-    <span class="swatch bg-{{color}}"></span>
-    <a href="{{ link }}">{{ title }}</a>
+<a href="{{ link }}" style="text-decoration: none; display: block;" class="project-card {{ classList }}">
+  <div class="card-number small">( {{ index }} )</div>
+  <div class="flex-container between">
+    <duotone-image src="{{ thumbnail }}" class="thumbnail"></duotone-image>
+    <div class="grow" style="width: calc(100% - var(--thumb-size));">
+      <div class="flex-row">
+        <span class="small fade">{{ type }}</span>
+        <span class="small">[ {{ year }} ]</span>
+      </div>
+      <h3 style="margin-top: 0.5em">{{ title }}</h3>
+      <p class="small">{{ description }}</p>
+    </div>
   </div>
-  <span>{{ year }}</span>
-  <span class="">{{ short }}</span>
-</div>
+</a>

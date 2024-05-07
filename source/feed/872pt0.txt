@@ -1,0 +1,12 @@
+---
+id: 872pt0
+timestamp: Tue Mar 26 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: 128kb Challenge
+tags: gum 3d generative
+thumbnail: /img/feed/noise_egg2.gif
+publish: true
+---
+
+@small Output for a the [128kb Challenge-https://128kb.vercel.app/]
+IMG @pixels /img/feed/noise_egg2.gif
+

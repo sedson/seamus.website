@@ -5,29 +5,55 @@ module.exports = flattenContent;
 
 
 /**
- * Put custom extensions in 
+ * Put custom extensions in.
  */
 const macros = {
-  'img' : (item) => {
+  'img': (item) => {
     let parts = item.content[0].content.split(' ');
     let href = parts[0];
     let altText = parts.slice(1).join(' ');
     return `<img ${toClass(item)} src="${href}" alt="${altText}">\n`;
-  }, 
-  'div.open' : (item) => {
-    return `<div ${toClass(item)}>\n`
-  }, 
-  'div.close' : (item) => {
-    return `</div>\n`
+  },
+  'dimg': (item) => {
+    let parts = item.content[0].content.split(' ');
+    let href = parts[0];
+    let altText = parts.slice(1).join(' ');
+    return `<duotone-image ${toClass(item)} src="${href}" alt="${altText}"></duotone-image>\n`;
+  },
+  'kdimg': (item) => {
+    let parts = item.content[0].content.split(' ');
+    let href = parts[0];
+    let altText = parts.slice(1).join(' ');
+    return `<duotone-image ${toClass(item)} src="${href}" alt="${altText}" maintain-brightness="true"></duotone-image>\n`;
+  },
+  'div.open': (item) => {
+    return `<div ${toClass(item)}>\n`;
+  },
+  'div.close': (item) => {
+    return `</div>\n`;
+  },
+  'ol.open': (item) => {
+    return `<ol ${toClass(item)} >\n`;
+  },
+  'ol.close': (item) => {
+    return `</ol>\n`;
+  },
+  'ul.open': (item) => {
+    return `<ul ${toClass(item)} >\n`;
+  },
+  'ul.close': (item) => {
+    return `</ul>\n`;
+  },
+  'escape': (item) => {
+    // TODO : flatten content?
+    return (item.content[0].content);
   }
 };
 
-
-function flattenContent (items) {
+function flattenContent(items) {
   let html = '';
-  
+
   for (let item of items) {
-    // console.log('ITEM', item);
 
     if (item.macro && macros[item.macro]) {
       html += macros[item.macro](item);
@@ -45,27 +71,27 @@ function flattenContent (items) {
  * Render one block level item.
  * @param {*} item 
  */
-function renderItem (item) {
+function renderItem(item) {
   let str = '';
-  const {type, content} = item ;
+  const { type, content } = item;
   str += `<${type}${toClass(item)}>`;
 
   for (let c of content) {
     switch (c.type) {
-      case 'text' :
-        str += c.content;
-        break;
-      
-      case 'a' :
-        let tokens = c.content.split('-');
-        const linkText = tokens[0];
-        const href = tokens.slice(1).join('-').trim();
+    case 'text':
+      str += c.content;
+      break;
 
-        str += `<a href="${href}"${toClass(href)}>${linkText}</a>`;
-        break;
+    case 'a':
+      let tokens = c.content.split('-');
+      const linkText = tokens[0];
+      const href = tokens.slice(1).join('-').trim();
 
-      default :
-        str += `<${c.type}>${c.content}</${c.type}>`;
+      str += `<a href="${href}"${toClass(href)}>${linkText}</a>`;
+      break;
+
+    default:
+      str += `<${c.type}>${c.content}</${c.type}>`;
     }
   }
   str += `</${type}>\n`;
@@ -73,7 +99,7 @@ function renderItem (item) {
 }
 
 
-function toClass (item) {
+function toClass(item) {
   if (typeof item === 'string' && item.indexOf('http') > -1) {
     return ' class="external"'
   }

@@ -1,0 +1,17 @@
+---
+title: Genuary
+year: 2024
+type: code
+short: Daily creative coding
+publish: true
+selected: true
+thumbnail: /img/thumbnails/genuary.png
+description: Daily creative coding practice.
+---
+
+div @desc.narrow
+I decided to participate in this years 
+/div
+
+IMG @half.grow /img/gum1.png
+

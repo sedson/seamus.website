@@ -1,0 +1,32 @@
+div @narrow.hyphens
+
+I'm Seamus (b. 1995), and this is my website: a place to organize my work and thoughts across programming, design, and art. ~ May 2024. ~
+
+## @mt-1 Currently 
+I'm creating tools to make things (sounds, images, games, comics) using the web browser. Right now these tools are suited to my own tastes and curiosities, but I am hoping to share them with friends very soon. For the last year I've been working on [Gum-/projects/gum] — a mini 3d engine using JavsScript + WebGL and [SynthKit-/projects/synthkit] — a WebAudio wrapper.
+
+
+## @mt-1 Recently
+div @flex-row.timeline
+@timeline-date 2021–2024 
+Full-time at [Bitsbox-https://bluprint.bitsbox.com/], where I worked with an amazing small team to bring 3D worlds and games to life on the web.
+/div
+
+div @flex-row.timeline
+@timeline-date 2018–2021
+Made ambient viedogames with my friends under the collective name [Rustforms-https://rustforms.net].
+/div
+
+div @flex-row.timeline
+@timeline-date 2020 
+Taught graphic design and 3D animation at the Shintaro Akatsu School of Design in Connecticut.
+/div
+
+
+## @mt-1 Links
+ul @inline-list
+- [email-mailto:seamus.edson@gmail.com]
+- [github-https://github.com/sedson]
+- [are.na-https://are.na/seamus-edson]
+- [read.cv-https://read.cv/sedson]
+/ul

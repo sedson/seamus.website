@@ -1,0 +1,7 @@
+---
+title: Visual Semiotics
+year: 2020
+type: teaching
+short: undergrad class
+publish: false
+---

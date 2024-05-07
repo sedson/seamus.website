@@ -1,7 +1,15 @@
-<div class="swatch bg-{{ color }}"></div>
-<h1>{{ title }}</h1>
-<p>{{ year }} ~ {{medium}}</p>
-
-<div class="two-column">
-{{ content }}
+<div class="project-header labels fade">
+  <p class="width-2">Title</p>
+  <p class="width-1">Year</p>
+  <p>Type</p>
+</div>
+<div class="project-header">
+  <h1 class="width-2">{{ title }}</h1>
+  <p class="width-1">{{ year }}</p>
+  <p> {{ type }}</p>
+</div>
+<div class="project">
+  <div class="gallery">
+    {{ content }}
+  </div>
 </div>
