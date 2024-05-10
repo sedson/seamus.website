@@ -55,6 +55,10 @@ p, ol, ul {
   margin-bottom: 1rem;
 }
 
+p + ul, p + ul {
+  margin-bottom: 0;
+}
+
 header {
   position: fixed;
   left: 0;
@@ -148,10 +152,17 @@ a.external::after {
   font-size: 0.875rem;
   margin-left: 0.25em;
   margin-top: -0.06rem;
+  max-width: 30ch;
+  overflow: hidden;
+  text-overflow: ellipsis ellipsis;
+  white-space: nowrap;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   font-size: 1em;
+}
+
+h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
@@ -159,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-h2 {
+h2, h4 {
   font-size: 0.875rem;
   display: inline-block;
   margin-bottom: 0.25rem;
@@ -172,12 +183,14 @@ ul, ol {
 
 ol > li {
   counter-increment: customlistcounter;
+  margin-left: 2em;
 }
 
 ol > li:before {
   content: counter(customlistcounter);
-  float: left;
   width: 2em;
+  display: inline-block;
+  margin-left: -2em;
 }
 
 ol.inline-list > li:before {
@@ -202,6 +215,22 @@ ul.site-map > li:before {
   margin-left: -2em;
 }
 
+details {
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+
+}
+summary {
+  opacity: 0.5;
+}
+
+code {
+  background-color: var(--page-color);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-family: unset;
+}
 .pad-1 {
   padding: 1em;
 }
@@ -420,6 +449,7 @@ pre {
 .scrollable {
   overflow-y: scroll;
   scrollbar-width: thin;
+  height: 600px;
 }
 
 .project-header {
@@ -636,15 +666,16 @@ a.project-card * {
   flex-flow: row wrap;
   align-items: flex-start;
 }
-.gallery * {
+.gallery > * {
   margin-bottom: 1rem;
 }
 
 .project {
   margin-top: 2rem;
 }
+
 .desc {
-  padding: 0 1rem 0 0 ;
+  padding-right: 1rem;
 }
 
 .sketchbook-folder {
@@ -677,8 +708,27 @@ a.project-card * {
   justify-content: center;
 }
 .sketch {
-  cursor: none;
   max-width: 800px;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.arrow > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-left {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.arrow-right {
+  transform: translate(0, -50%);
+  right: 1rem;
 }
 #sketchbook-cursor {
   position: fixed;
@@ -686,7 +736,6 @@ a.project-card * {
   width: clamp(2rem, 4vw, 100px);
   height: clamp(2rem, 4vw, 100px);
   transform: translate(-50%, -50%);
-  cursor: none;
   pointer-events: none;
   transition: transform 0.1s;
 }
@@ -748,4 +797,54 @@ a.project-card * {
 @media screen and (max-width: 500px) {
   .narrow { width: calc(6* var(--col-width)); }
   .x-narrow { width: calc(6 * var(--col-width)); }
+}
+
+.calendar > a {
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+  border-collapse: collapse;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.gen-post {
+  border-top: 1px solid var(--text-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  display: none;
+}
+.prompt::before {
+  content: 'Prompt: ';
+  opacity: 0.75;
+}
+.iframe-container {
+  aspect-ratio: 1;
+  overflow: hidden;
+  max-height: 640px;
+  position: relative;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.active {
+  background-color: var(--text-color);
+  color: var(--page-color);
+}
+.sketch-number {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.log p {
+  margin-bottom: 0;
+}
+.log {
+  margin-bottom: 1rem;
 }

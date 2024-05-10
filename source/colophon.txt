@@ -6,5 +6,3 @@ This site is built from a collection of markdown-ish files that get parsed and r
 
 The templating code is mostly pulled from [this post-https://hackernoon.com/how-to-create-new-template-engine-using-javascript-8f26313p] by shadowtime2000. The parsing code is pretty dodgy, and I want to update it soon!
 
-
-## @mt-1 Log

@@ -20,6 +20,7 @@ const flags = {
     '~': 'em.open.close',
     '*': 'strong.open.close',
     '%': 'span.open.close',
+    '`': 'code.open.close',
     '[': 'a.open',
     ']': 'a.close',
   },

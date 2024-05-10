@@ -1,54 +1,35 @@
-const cursor = document.getElementById('sketchbook-cursor');
+function changeImage(group, forward = true) {
+  const ndx = Number(group.dataset.index) - 1;
+  const count = Number(group.dataset.count);
+  const folder = group.dataset.folder;
 
-const images = document.querySelectorAll('duotone-image');
+  let next = ndx + (forward ? 1 : -1);
+  next = ((next + count) % count) + 1;
 
-function positionCursor(x, y, left) {
-  cursor.style.left = x + 'px';
-  cursor.style.top = y + 'px';
-  if (left) {
-    cursor.style.transform = 'translate(-50%, -50%) rotate(180deg)';
-  } else {
-    cursor.style.transform = 'translate(-50%, -50%)';
-  }
+  group.querySelector('.counter').innerText = next;
+  group.dataset.index = next;
+  group.querySelector('duotone-image').src = `/img/sketchbook/${folder}/${folder}_scan${next}.png`;
 }
 
+
+const images = document.querySelectorAll('duotone-image');
 for (let image of images) {
-
   const parent = image.parentElement.parentElement;
-  const counter = parent.querySelector('.counter');
-
-
   image.addEventListener('click', e => {
     const rect = image.getBoundingClientRect();
-    const left = e.clientX < rect.left + rect.width / 2;
-
-    const ndx = Number(image.dataset.index) - 1;
-    const count = Number(image.dataset.count);
-    const folder = image.dataset.folder;
-
-    let next = ndx + (left ? -1 : 1);
-    next = ((next + count) % count) + 1;
-
-    counter.innerText = next;
-    image.dataset.index = next;
-    image.src = `/img/sketchbook/${folder}/${folder}_scan${next}.png`;
+    const right = e.clientX >= rect.left + rect.width / 2;
+    changeImage(parent, right);
   });
+}
 
-  image.addEventListener('mousemove', e => {
-    const rect = image.getBoundingClientRect();
-    const left = e.clientX < rect.left + rect.width / 2;
-    positionCursor(e.clientX, e.clientY, left);
+const lefts = document.querySelectorAll('.arrow-left');
+for (let arrow of lefts) {
+  const parent = arrow.parentElement;
+  arrow.onclick = () => changeImage(parent, false);
+}
 
-  });
-
-  image.addEventListener('mouseout', e => {
-    cursor.style.visibility = 'hidden';
-  });
-
-  image.addEventListener('mouseover', e => {
-    cursor.style.visibility = 'visible';
-    const rect = image.getBoundingClientRect();
-    const left = e.clientX < rect.left + rect.width / 2;
-    positionCursor(e.clientX, e.clientY, left);
-  });
+const rights = document.querySelectorAll('.arrow-right');
+for (let arrow of rights) {
+  const parent = arrow.parentElement;
+  arrow.onclick = () => changeImage(parent, true);
 }

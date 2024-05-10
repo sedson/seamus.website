@@ -1,12 +1,15 @@
 /**
- * @file Provide some light utility for making SVGs from script.
+ * @file Making SVGs from script and getting a
  */
 
 /**
- * Extremely simple tag helper.
+ * Simple tag class.
  */
 class Tag {
   constructor(type, attrs = {}) {
+    /** 
+     * The SVG tag type.
+     */
     this.type = type;
     this.children = [];
     this.attrs = attrs;
@@ -17,7 +20,10 @@ class Tag {
   }
 
   render() {
-    const attrs = Object.entries(this.attrs).map(x => `${x[0]}="${x[1]}"`).join(' ');
+    const attrs = Object.entries(this.attrs)
+      .map(x => `${x[0]}="${x[1]}"`)
+      .join(' ');
+
     return `<${this.type} ${attrs}>` + this.children.reduce((a, b) => a + b.render(), '') + `</${this.type}>`;
   }
 }

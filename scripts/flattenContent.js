@@ -46,7 +46,7 @@ const macros = {
   },
   'escape': (item) => {
     // TODO : flatten content?
-    return (item.content[0].content);
+    return item.content[0].content + '\n';
   }
 };
 

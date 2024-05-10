@@ -100,7 +100,6 @@ function main() {
   console.time('main');
   const date = getDateFormat();
 
-
   const t_page = ctx => {
     return template('main')({ ...ctx, date });
   }
@@ -200,20 +199,19 @@ function main() {
   // The plain text default pages
   // ----------------------------------
   const plainPages = [
-    'About',
-    'Colophon',
-    'Now',
+    ['About', get('source/about.txt').content],
   ];
 
+
+
   for (let p of plainPages) {
-    console.log(p);
-    const pageLc = p.toLowerCase();
+    const pageLc = p[0].toLowerCase();
     write(`www/${pageLc}/index.html`, t_page({
       header: t_header({ nav: getNav(pageLc) }),
       footer,
-      title: `Seamus Edson - ${p}`,
+      title: `Seamus Edson - ${p[0]}`,
       body: template('page')({
-        content: get(`source/${pageLc}.txt`).content,
+        content: p[1]
       }),
     }));
   }
@@ -242,9 +240,11 @@ function main() {
       count: images.length,
       links: links,
       folder: dir,
-      img: `/img/sketchbook/${dir}/${files[0]}`
+      img: `/img/sketchbook/${dir}/${files[0]}`,
+      arrow: widgets.arrow,
     });
   });
+
 
   write('www/sketchbook/index.html', t_page({
     header: t_header({ nav: getNav('sketchbook') }),
@@ -252,7 +252,6 @@ function main() {
     title: 'Seamus Edson - Sketchbook',
     body: template('sketchbook')({
       content: groups.join('\n'),
-      arrow: widgets.arrow,
     }),
   }));
 
@@ -284,9 +283,10 @@ function main() {
 
     const postMarkup = template('post')(post);
     posts.push(postMarkup);
-
-    write('www/feed/posts.json', JSON.stringify(postsJson, null, 2));
   }
+
+  write('www/feed/posts.json', JSON.stringify(postsJson, null, 2));
+
   // ----------------------------------
   // FEED
   // ----------------------------------
@@ -297,7 +297,27 @@ function main() {
     body: template('feed')({ posts: posts.join('\n'), ...widgets }),
   }));
 
+  // ----------------------------------
+  // COLOPHON
+  // ----------------------------------
+  let log = fs.readFileSync('log.txt', 'utf8');
+  log = log.split('\n').slice(0, 3).join('\n');
+  log = parseContent(log);
+  log = flattenContent(log.content);
+
+
+  write('www/colophon/index.html', t_page({
+    header: t_header({ nav: getNav('colophon') }),
+    footer,
+    title: 'Seamus Edson - Colophon',
+    body: template('colophon')({
+      content: get('source/colophon.txt').content,
+      log
+    })
+  }));
+
   console.timeEnd('main');
+
 }
 
 main();

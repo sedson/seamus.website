@@ -9,9 +9,397 @@ thumbnail: /img/thumbnails/genuary.png
 description: Daily creative coding practice.
 ---
 
-div @desc.narrow
-I decided to participate in this years 
+$ <script type="text/javascript" src="/js/genuary.js" defer></script>
+
+
+div @desc.narrow.hyphens
+
+[Genuary-https://genuary.art/] 2024. Daily code-art prompts for the month of January. Made with [Gum-/projects/gum].
+
+$ <details><summary>More Info</summary>
+
+I did this year's Genuary as a way to dogfood Gum, the 3D creative-coding library I've been working on. ~Trying to~ make something interesting with the engine everyday was a great way to uncover a bunch of rough edges, weird bugs, and frustrating patterns in this early version of Gum.
+
+It was also a fun way to explore some classic generative art algorithms that I'd never actually coded before. I worked for about two hours per day, but some pieces took a lot longer. 
+
+I tried to stick to a few constraints for each sketch:
+ol 
+- Two colors per sketch — gradients allowed
+- Centered compositions
+- No assets — mesh primitives only
+
+$ </details>
+
+View the prompts, my sketches, and notes with the calendar links:
+
+$ <div style="display: flex; flex-flow: row wrap; width: 14em" class="calendar">
+$ <a href="#1" class="cal-link">1</a>
+$ <a href="#2" class="cal-link">2</a>
+$ <a href="#3" class="cal-link">3</a>
+$ <a href="#4" class="cal-link">4</a>
+$ <a href="#5" class="cal-link">5</a>
+$ <a href="#6" class="cal-link">6</a>
+$ <a href="#7" class="cal-link">7</a>
+$ <a href="#8" class="cal-link">8</a>
+$ <a href="#9" class="cal-link">9</a>
+$ <a href="#10" class="cal-link">10</a>
+$ <a href="#11" class="cal-link">11</a>
+$ <a href="#12" class="cal-link">12</a>
+$ <a href="#13" class="cal-link">13</a>
+$ <a href="#14" class="cal-link">14</a>
+$ <a href="#15" class="cal-link">15</a>
+$ <a href="#16" class="cal-link">16</a>
+$ <a href="#17" class="cal-link">17</a>
+$ <a href="#18" class="cal-link">18</a>
+$ <a href="#19" class="cal-link">19</a>
+$ <a href="#20" class="cal-link">20</a>
+$ <a href="#21" class="cal-link">21</a>
+$ <a href="#22" class="cal-link">22</a>
+$ <a href="#23" class="cal-link">23</a>
+$ <a href="#24" class="cal-link">24</a>
+$ <a href="#25" class="cal-link">25</a>
+$ <a href="#26" class="cal-link">26</a>
+$ <a href="#27" class="cal-link">27</a>
+$ <a href="#28" class="cal-link">28</a>
+$ <a href="#29" class="cal-link">29</a>
+$ <a href="#30" class="cal-link">30</a>
+$ <a href="#31" class="cal-link">31</a>
+$ </div>
+
+$ <div class="gen-post" id="day-1">
+#### January 1
+@prompt Particles, lots of them.
+
+A bunch of spheres parented to one rotating transform – not that interesting. 
+
+I ended up spending most of the time on day 1 getting the trails effect. It's a simple partial-frame-clear post-processing effect, but getting the drawing buffer to be recycled took some effort. I ended up using this effect in a bunch of the the later sketches, so totally worth it! 
+
+@button.small.randomize Randomize
+@small.fade [next→-#2] 
 /div
 
-IMG @half.grow /img/gum1.png
+$ <div class="gen-post" id="day-2">
+#### January 2
+@prompt No palettes.
+
+I started with the constraint that every sketch would use two randomly picked colors, so this prompt was kind of a layup. Used the time to write a helper to pick colors that were high-contrast enough to be visible. Used that function for the rest of the sketches.
+
+The drawing is concentric spheres with their front-faces culled + shader-based noise jiggle.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#1] [next→-#3]
+/div
+
+$ <div class="gen-post" id="day-3">
+#### January 3
+@prompt Droste effect.
+
+
+The Droste effect is the recursive frame-within-a-frame thing. I used the frame feedback effect from day 1 + a UV scale to get the previous frame drawing inside the new one.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#2] [next→-#4]
+/div
+
+
+$ <div class="gen-post" id="day-4">
+#### January 4
+@prompt Pixels.
+
+Used WebGL instanced drawing. A bunch of sphere instances scaling up and down (in the vertex shader) to act as little pixels.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#3] [next→-#5]
+/div
+
+
+$ <div class="gen-post" id="day-5">
+#### January 5
+@prompt In the style of Vera Molnár (1924-2023).
+
+Didn't spend much time on this one. Rotating cubes with a position-snapping vertex shader.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#4] [next→-#6]
+/div
+
+
+$ <div class="gen-post" id="day-6">
+#### January 6
+@prompt Screensaver.
+
+Went for a 3D take on the DVD idle screen. Getting the collision detection working inside the rotated space of the cube led me to a bunch of small bugs and annoyances with my transform code in Gum.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#5] [next→-#7]
+/div
+
+$ <div class="gen-post" id="day-7">
+#### January 7
+@prompt Progress bar / indicator / loading animation.
+
+Played around with sine waves unit I ended up with this. More trails.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#6] [next→-#8]
+/div
+
+$ <div class="gen-post" id="day-8">
+#### January 8
+@prompt Chaotic system.
+
+Coded some springs. This one starts with a 3D lattice of points, randomly connects about half of the points with springs. I added enough damping so that the resulting system wouldn't bee too too chaotic.
+
+I also added a depth-based fog gradient effect, which I ended up using a lot more throughout the month.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#7] [next→-#9]
+/div
+
+$ <div class="gen-post" id="day-9">
+#### January 9
+@prompt ASCII.
+
+ASCII half-toning as a shader effect! Draws the ASCII value map to a texture. Each tile of the final effect samples its character from this texture based on the brightness.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#8] [next→-#10]
+/div
+
+$ <div class="gen-post" id="day-10">
+#### January 10
+@prompt Hexagonal.
+
+Did this one a couple days late. I was a good chance to write the cylinder primitive into Gum – which it didn't previously have.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#9] [next→-#11]
+/div
+
+$ <div class="gen-post" id="day-11">
+#### January 11
+@prompt In the style of Anni Albers (1899-1994).
+
+I really wanted to make something that felt woven. It took a lot of fiddling. Animations are sine waves applied in the vertex shader. I added the depth gradient to really exaggerate the over-under.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#10] [next→-#12]
+/div
+
+$ <div class="gen-post" id="day-12">
+#### January 12
+@prompt Lava lamp.
+
+Metaballs-ish. Spheres drawn in 3D then fed into a box blur + threshold post process shader.
+
+
+@button.small.randomize Randomize
+@small.fade [←prev-#11] [next→-#13]
+/div
+
+$ <div class="gen-post" id="day-13">
+#### January 13
+@prompt Wobbly function day.
+
+Wobbly function is [Piter Pasma's-https://piterpasma.nl] term for modulated and nested sinusoids. `sin(a + bx + cos(c + dx))` would be an example. This sketch uses 2D dimensions of wobble to drive the rotation of the instanced lines.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#12] [next→-#14]
+/div
+
+
+$ <div class="gen-post" id="day-14">
+#### January 14
+@prompt Less than 1KB artwork.
+
+Icospheres + random decimation + depth gradient. I kept the script to 0.5KB, which was a fun challenge. 
+
+@button.small.randomize Randomize
+@small.fade [←prev-#13] [next→-#15]
+/div
+
+$ <div class="gen-post" id="day-15">
+#### January 15
+@prompt Use a physics library.
+
+Got really stubborn on this one and didn't wanna use an external physics library. Ended up staying up til 3am learning about physics solvers and getting a really simple sphere-only Verlet system working. Still really busted with large time steps.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#14] [next→-#16]
+/div
+
+$ <div class="gen-post" id="day-16">
+#### January 16
+@prompt Draw 10,000 of something.
+
+Like some of the earlier sketches, { [day 4-#4] | [day 13-#13] } this one uses WebGL instancing. 10k spheres whose size is driven by a spherical distance function. All animation in the vertex shader.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#15] [next→-#17]
+/div
+
+$ <div class="gen-post" id="day-17">
+#### January 17
+@prompt Inspired by Islamic art.
+
+Had a bunch of false starts with this one. I kept trying to make interesting things using straight-line intersection math based on articles on Islamic tilings. The ergonomics of doing 2D lines and shapes in Gum were definitely getting in my way. 
+
+This ended up basically being a circular version of the Anni Albers weaving sketch { [day 11-#11] }.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#16] [next→-#18]
+/div
+
+$ <div class="gen-post" id="day-18">
+#### January 18 
+@prompt Bauhaus.
+
+It's not even from the Bauhaus, but I really wanted to make something like [this image-https://d2w9rnfcy7mm78.cloudfront.net/682553/original_05b6054a62198e1854b7cefb3f13f1d3.jpeg?1471630506?bc=1] using a depth-modulated spiral effect. It didn't end up being all that effective.
+
+
+@button.small.randomize Randomize
+@small.fade [←prev-#17] [next→-#19] 
+/div
+
+$ <div class="gen-post" id="day-19">
+#### January 19
+@prompt Flocking.
+
+WOW I love boids!
+
+@button.small.randomize Randomize
+@small.fade [←prev-#18] [next→-#20]
+/div
+
+$ <div class="gen-post" id="day-20">
+#### January 20
+@prompt Generative typography.
+
+For this one, I made a tiny input tool to define the letters of the uppercase alphabets as bitmaps. Those bitmaps determine where the 3D spheres end up. A dither + outline post-process effect gives the noisy result. Not super readable.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#19] [next→-#21]
+/div
+
+$ <div class="gen-post" id="day-21">
+#### January 21
+@prompt Use a library that you haven’t used before.
+
+Took this chance to explore a few different patters for programming async, tweened animations with Gum. I also added some utilities to get the 2D, screen-space center of a transform to position the labels.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#20] [next→-#22]
+/div
+
+$ <div class="gen-post" id="day-22">
+#### January 22
+@prompt Point - line - plane.
+
+Shout out to [Paul Bourke-https://paulbourke.net/] – his collision and intersection code examples have saved my so many times. In this one, near intersections between 3D lines drive the sizes of spheres.
+
+I wanted the sketch to feel musical in the way that Kandinsky's (who inspired the prompt) paintings do. 
+
+@button.small.randomize Randomize
+@small.fade [←prev-#21] [next→-#23]
+/div
+
+$ <div class="gen-post" id="day-23">
+#### January 23
+@prompt 8×8.
+
+Satisfying rotation offsets + trails.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#22] [next→-#24]
+/div
+
+$ <div class="gen-post" id="day-24">
+#### January 24
+@prompt Impossible objects (undecided geometry).
+
+Really mailed it in on this one.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#23] [next→-#25]
+/div
+
+$ <div class="gen-post" id="day-25">
+#### January 25
+@prompt Inspired by a photo on your phone.
+
+Brute-force packing with some cute flowers.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#24] [next→-#26]
+/div
+
+$ <div class="gen-post" id="day-26">
+#### January 26
+@prompt Grow a seed.
+
+L-systems are awesome! This was my first time working directly with L-systems, and was probably the most fun to program of any of the sketches.
+
+
+@button.small.randomize Randomize
+@small.fade [←prev-#25] [next→-#27]
+/div
+
+$ <div class="gen-post" id="day-27">
+#### January 27
+@prompt Code for one hour. At the one hour mark, you’re done.
+
+Simplex noise layers using [Stefan Gustafson's-https://github.com/stegu/webgl-noise] noise functions.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#26] [next→-#28]
+/div
+
+$ <div class="gen-post" id="day-28">
+#### January 28
+@prompt Skeuomorphism.
+
+A (barely) skeuomorphic oscilloscope playing a wobbly function { [day 13-#13] }.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#27] [next→-#29]
+/div
+
+$ <div class="gen-post" id="day-29">
+#### January 29
+@prompt Signed Distance Functions.
+
+I was so excited to get 2D SDFs going! Added some dithering too.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#28] [next→-#30]
+/div
+
+$ <div class="gen-post" id="day-30">
+#### January 30
+@prompt Shaders.
+
+Ray-marching 3D SDFs! After the end of the month I spent another 3 or so day's worth of fiddle time trying the ray-marched scene to depth test correctly with the rasterized scene.
+
+@button.small.randomize Randomize
+@small.fade [←prev-#29] [next→-#31]
+/div
+
+$ <div class="gen-post" id="day-31">
+#### January 31
+@prompt Generative music / Generative audio / Generative sound.
+
+
+
+@button.small.randomize Randomize
+@small.fade [←prev-#30]
+/div
+
+
+/div
+
+div @iframe-container.narrow.grow
+@sketch-number ( 1 )
+$ <iframe></iframe>
+
+/div
 
