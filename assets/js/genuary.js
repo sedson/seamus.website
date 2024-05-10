@@ -1,20 +1,36 @@
-const frame = document.querySelector('iframe');
+const frameContainer = document.querySelector('.iframe-container');
 const links = document.querySelectorAll('.cal-link');
 const posts = document.querySelectorAll('.gen-post');
 const btns = document.querySelectorAll('.randomize');
 
+const frame = document.createElement('iframe');
+frameContainer.append(frame);
+
+
+function loadPage(i) {
+  frame.remove();
+  frame.classList.add('hidden');
+  frame.src = `https://files.seamus.website/genuary/pages/${i}.html`;
+  frameContainer.append(frame);
+  document.querySelector('.sketch-number').innerText = `( ${i} )`;
+
+
+  frame.onload = () => {
+    frame.classList.remove('hidden');
+  }
+}
+
+
 function update() {
   let p = window.location.hash.replace('#', '');
   p = Number(p);
-  if (Number.isNaN(p)) {
-    return;
+
+  if (Number.isNaN(p) || p < 1 || p > 31) {
+    p = 1;
   }
 
-  if (p < 1 || p > 31) {
-    return;
-  }
+  loadPage(p);
 
-  frame.src = `https://files.seamus.website/genuary/pages/${p}.html`
   for (let link of links) {
     link.classList.remove('active');
     if (link.hash.replace('#', '') == p) {
@@ -33,21 +49,10 @@ for (let btn of btns) {
   btn.onclick = () => update();
 }
 
-window.addEventListener('hashchange', (e) => {
-  update();
-});
-
-
 window.addEventListener('DOMContentLoaded', e => {
-  e.preventDefault();
-  if (!window.location.hash) {
-    window.location.hash = '#1';
-  }
   update();
-  window.scrollTo(0, 0);
 });
 
-frame.onload = () => {
-  let p = window.location.hash.replace('#', '');
-  document.querySelector('.sketch-number').innerText = `( ${p} )`;
-}
+window.addEventListener('hashchange', e => {
+  update();
+});

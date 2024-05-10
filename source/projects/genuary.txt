@@ -399,7 +399,5 @@ $ <div class="gen-post" id="day-31">
 
 div @iframe-container.narrow.grow
 @sketch-number ( 1 )
-$ <iframe></iframe>
-
 /div
 

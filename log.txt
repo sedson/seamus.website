@@ -1,8 +1,9 @@
-2b155c2 2024-05-07	sedson	major update
-cae49ca 2023-08-16	sedson	Udate css
-a57e89d 2023-05-25	sedson	Simplify, under construction
-1cf627a 2023-05-24	seamusedson	Little fix
-d08cf2b 2023-02-17	sedson	Adding dark mode media query, post date fix
-a3502a0 2023-02-16	sedson	Adding readme
-2da3bce 2023-02-16	sedson	Cleanup and css tweaks
-45f11e3 2023-02-14	sedson	seamus.website is up
+2024-05-10 adding Genuary page, sketchbook arrow buttons, style tweaks
+2024-05-07 major update
+2023-08-16 Udate css
+2023-05-25 Simplify, under construction
+2023-05-24 Little fix
+2023-02-17 Adding dark mode media query, post date fix
+2023-02-16 Adding readme
+2023-02-16 Cleanup and css tweaks
+2023-02-14 seamus.website is up

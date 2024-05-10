@@ -6,13 +6,39 @@ publish: true
 type: code
 selected: true
 thumbnail: /img/thumbnails/gum.png
-description: JavaScript and WebGL mini-engine for games and creative coding.
+description: JavaScript and WebGL library for games and creative coding.
 ---
 
-div @desc.narrow
-JavaScript and WebGL mini engine for games and creative coding.
+div @desc.narrow.hyphens
+Gum is a small library for creating browser-based visuals and games with JavaScript and WebGL.
+
+
+## Some Features 
+ul
+- Mesh primitives — uvsphere, icosphere, plane, cube, cylinder, cone
+- Scene graph
+- Mesh loading — .ply + .gltf
+- Abstraction for WebGL instanced drawing
+- Math, color, and texture utilities
+/ul
+
+I've been working on Gum (slowly) since early 2023. I've been using it as my main creative coding environment since then, adding features as they've become useful to me. It's not quite ready for a release, but it's getting there. 
+
+## Next Steps
+ul
+- Scene serialization/deserialization
+- Documentation 
+- Clean up Vector and Matrix classes
+- 2D drawing utilities
+/ul
+
+
+
 /div
 
-IMG @half.grow /img/gum1.png
+$ <canvas id="canvas" class="narrow grow" style="border: 1px solid var(--text-color)"></canvas>
+$ <script type="text/javascript" src="/js/gum.min.js" defer></script>
+$ <script type="text/javascript" src="/js/demo.js" defer></script>
+
 
 
