@@ -64,7 +64,7 @@ header {
   left: 0;
   top: 0;
   width: calc(100%);
-  z-index: 2;
+  z-index: 10;
   padding: var(--body-pad);
   padding-bottom: 0;
   background-color: var(--page-color);
@@ -76,6 +76,7 @@ footer {
   width: calc(100% - 2rem);
   position: fixed;
   bottom: var(--body-pad);
+  z-index: 8;
 }
 footer * {
   font-size: 0.75rem;
@@ -271,7 +272,7 @@ code {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 15;
   pointer-events: none;
   pointer-events: none;
   width: 100vw;
@@ -457,7 +458,6 @@ pre {
 .scrollable {
   overflow-y: scroll;
   scrollbar-width: thin;
-  height: 600px;
 }
 
 .project-header {
@@ -833,12 +833,29 @@ a.project-card * {
   overflow: hidden;
   max-height: 640px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iframe-container::before {
+  content: ' ';
+  background-color: var(--text-color);
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 iframe {
   width: 100%;
   height: 100%;
   border: none;
   transition: opacity 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 iframe.hidden {
   opacity: 0;
@@ -864,4 +881,23 @@ iframe.hidden {
 }
 .log {
   margin-bottom: 1rem;
+}
+
+.loader {
+  opacity: 0.1;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: var(--text-color);
+  animation-name: load;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-align: center;
+  display: inline-block;
+}
+@keyframes load {
+  0% { transform: translate(-10px) }
+  50% { transform: translate(10px) }
+  100% { transform: translate(-10px) }
+
 }

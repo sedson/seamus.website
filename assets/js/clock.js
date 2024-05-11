@@ -14,6 +14,7 @@ Object.assign(clock.style, {
   right: 'var(--body-pad)',
   display: 'flex',
   pointerEvents: 'none',
+  zIndex: 20,
 });
 
 const clockSvg = new SVG(100, 100);

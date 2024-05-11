@@ -222,6 +222,17 @@ function main() {
   const folders = fs.readdirSync('www/img/sketchbook')
     .filter(x => x[0] !== '.'); // Filter out .DS_Store
 
+  const seasons = ['spring', 'summer', 'fall', 'winter'];
+
+  folders.sort((a, b) => {
+    let [aSeason, aYear] = a.split('_');
+    let [bSeason, bYear] = b.split('_');
+    aYear = aYear.split('-')[0];
+    bYear = bYear.split('-')[0];
+    const yearSort = bYear - aYear;
+    const seasonSort = (seasons.indexOf(bSeason) - seasons.indexOf(aSeason)) / 10;
+    return yearSort + seasonSort;
+  });
 
   const groups = folders.map(dir => {
     const files = fs.readdirSync(`www/img/sketchbook/${dir}`)

@@ -70,9 +70,7 @@ $ <div class="gen-post" id="day-1">
 #### January 1
 @prompt Particles, lots of them.
 
-A bunch of spheres parented to one rotating transform – not that interesting. 
-
-I ended up spending most of the time on day 1 getting the trails effect. It's a simple partial-frame-clear post-processing effect, but getting the drawing buffer to be recycled took some effort. I ended up using this effect in a bunch of the the later sketches, so totally worth it! 
+Spheres parented to a rotating transform. I ended up spending most of the time on Day 1 getting the trails effect working. Recycling the drawing buffer took some effort. I ended up using this effect in a bunch of the the later sketches, so totally worth it!
 
 @button.small.randomize Randomize
 @small.fade [next→-#2] 
@@ -82,9 +80,7 @@ $ <div class="gen-post" id="day-2">
 #### January 2
 @prompt No palettes.
 
-I started with the constraint that every sketch would use two randomly picked colors, so this prompt was kind of a layup. Used the time to write a helper to pick colors that were high-contrast enough to be visible. Used that function for the rest of the sketches.
-
-The drawing is concentric spheres with their front-faces culled + shader-based noise jiggle.
+I started the month with a self-imposed constraint that every sketch would use two randomly picked colors. Wrote a helper to pick colors combos that tend to be higher-contrast. Used that function for the rest of the sketches. Concentric circles + shader-based noise jiggle.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#1] [next→-#3]
@@ -95,7 +91,7 @@ $ <div class="gen-post" id="day-3">
 @prompt Droste effect.
 
 
-The Droste effect is the recursive frame-within-a-frame thing. I used the frame feedback effect from day 1 + a UV scale to get the previous frame drawing inside the new one.
+The [Droste effect-https://en.wikipedia.org/wiki/Droste_effect] is when an image appears within itself. I used the video feedback effect from { [day 1-#1] } + UV scaling to get the previous frame drawing inside the new one.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#2] [next→-#4]
@@ -106,7 +102,7 @@ $ <div class="gen-post" id="day-4">
 #### January 4
 @prompt Pixels.
 
-Used WebGL instanced drawing. A bunch of sphere instances scaling up and down (in the vertex shader) to act as little pixels.
+Got WebGL instanced drawing working. Sphere instances scaling up and down to act as pixels.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#3] [next→-#5]
@@ -117,7 +113,7 @@ $ <div class="gen-post" id="day-5">
 #### January 5
 @prompt In the style of Vera Molnár (1924-2023).
 
-Didn't spend much time on this one. Rotating cubes with a position-snapping vertex shader.
+Rotating cubes with a position-snapping vertex shader.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#4] [next→-#6]
@@ -399,5 +395,9 @@ $ <div class="gen-post" id="day-31">
 
 div @iframe-container.narrow.grow
 @sketch-number ( 1 )
+
+div @loader 
+/div
+
 /div
 
