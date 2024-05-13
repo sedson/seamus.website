@@ -3,9 +3,9 @@ div @narrow.hyphens
 *Seamus Edson* is a computer artist and programmer based in New York. He makes generative systems, 3D graphics, light-weight tools, websites, and drawings. This site is an evolving container for those activities.
 
 ul @site-map
-- [about-/about] <br> more info and links
-- [projects-/projects] <br> index of some larger projects
-- [feed-/feed] <br> small things, ideas, works in progress
+- [about-/about] <br> info and links
+- [projects-/projects] <br> index of larger projects
+- [feed-/feed] <br> ideas, scraps, works in progress
 - [sketchbook-/sketchbook] <br> physical sketchbook scans
 /ul
 

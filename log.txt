@@ -1,3 +1,4 @@
+2024-05-11 sorting sketchbook folders, adding loader to genuary, cleanup unused js
 2024-05-10 update project pages
 2024-05-10 adding Genuary page, sketchbook arrow buttons, style tweaks
 2024-05-07 major update

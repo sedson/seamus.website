@@ -2,7 +2,7 @@
 Set in [Atlas Typewriter-https://commercialtype.com/catalog/atlas_typewriter] – designed by Susana Carvalho, Kai Bernau, Ilya Ruderman, Irene Vlachou and distributed by Commercial Type.
 
 ## @mt-1 Build
-This site is built from a collection of markdown-ish files that get parsed and rendered into HTML templates by a few really naive nodejs scripts.
+This site is built from a collection of markdown-ish files that get parsed and rendered into HTML templates by a few naive nodejs scripts.
 
 The templating code is mostly pulled from [this post-https://hackernoon.com/how-to-create-new-template-engine-using-javascript-8f26313p] by shadowtime2000. The parsing code is pretty dodgy, and I want to update it soon!
 

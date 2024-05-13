@@ -18,11 +18,11 @@ div @desc.narrow.hyphens
 
 $ <details><summary>More Info</summary>
 
-I did this year's Genuary as a way to dogfood Gum, the 3D creative-coding library I've been working on. ~Trying to~ make something interesting with the engine everyday was a great way to uncover a bunch of rough edges, weird bugs, and frustrating patterns in this early version of Gum.
+I did this year's Genuary as a way to dogfood Gum, the 3D creative-coding library I've been working on. Trying to make something ~interesting~ with the engine everyday was a great way to uncover rough edges, weird bugs, and frustrating patterns in this early version of Gum.
 
-It was also a fun way to explore some classic generative art algorithms that I'd never actually coded before. I worked for about two hours per day, but some pieces took a lot longer. 
+It was also a fun way to explore some classic generative art techniques that I'd never coded before - boids, L-systems, hex grids. I tried to spend one to two hours on each sketch, but some took a lot longer. 
 
-I tried to stick to a few constraints for each sketch:
+I gave myself a few constraints for each sketch:
 ol 
 - Two colors per sketch — gradients allowed
 - Centered compositions
@@ -30,7 +30,7 @@ ol
 
 $ </details>
 
-View the prompts, my sketches, and notes with the calendar links:
+View the prompts, sketches, and notes:
 
 $ <div style="display: flex; flex-flow: row wrap; width: 14em" class="calendar">
 $ <a href="#1" class="cal-link">1</a>
@@ -70,7 +70,7 @@ $ <div class="gen-post" id="day-1">
 #### January 1
 @prompt Particles, lots of them.
 
-Spheres parented to a rotating transform. I ended up spending most of the time on Day 1 getting the trails effect working. Recycling the drawing buffer took some effort. I ended up using this effect in a bunch of the the later sketches, so totally worth it!
+Spheres parented to a rotating transform. I ended up spending most of the time on Day 1 getting the trails effect working. Recycling the drawing buffer took some effort. I ended up using this effect in a bunch of the later sketches, so totally worth it!
 
 @button.small.randomize Randomize
 @small.fade [next→-#2] 
@@ -80,7 +80,7 @@ $ <div class="gen-post" id="day-2">
 #### January 2
 @prompt No palettes.
 
-I started the month with a self-imposed constraint that every sketch would use two randomly picked colors. Wrote a helper to pick colors combos that tend to be higher-contrast. Used that function for the rest of the sketches. Concentric circles + shader-based noise jiggle.
+I started the month with a self-imposed constraint that each sketch would use two randomly-picked colors. I wrote a helper to pick color combos that tend to be higher-contrast. The sketch is concentric circles + shader-based noise jiggle.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#1] [next→-#3]
@@ -91,7 +91,7 @@ $ <div class="gen-post" id="day-3">
 @prompt Droste effect.
 
 
-The [Droste effect-https://en.wikipedia.org/wiki/Droste_effect] is when an image appears within itself. I used the video feedback effect from { [day 1-#1] } + UV scaling to get the previous frame drawing inside the new one.
+The [Droste effect-https://en.wikipedia.org/wiki/Droste_effect] is when an image appears within itself. I used the video feedback effect from { [day 1-#1] } and UV scaling to get the previous frame drawing inside the new one.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#2] [next→-#4]
@@ -102,7 +102,7 @@ $ <div class="gen-post" id="day-4">
 #### January 4
 @prompt Pixels.
 
-Got WebGL instanced drawing working. Sphere instances scaling up and down to act as pixels.
+Got WebGL instances working. Sphere instances scaling up and down to act as pixels.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#3] [next→-#5]
@@ -113,7 +113,7 @@ $ <div class="gen-post" id="day-5">
 #### January 5
 @prompt In the style of Vera Molnár (1924-2023).
 
-Rotating cubes with a position-snapping vertex shader.
+Rotating cubes with a position-snapping vertex shader. I had never heard of Vera Molnár. Her work is really inspiring.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#4] [next→-#6]
@@ -144,7 +144,7 @@ $ <div class="gen-post" id="day-8">
 #### January 8
 @prompt Chaotic system.
 
-Coded some springs. This one starts with a 3D lattice of points, randomly connects about half of the points with springs. I added enough damping so that the resulting system wouldn't bee too too chaotic.
+Made some springs. This one starts with a 3D lattice of points, then randomly connects about half of the points with springs. I added enough damping so that the resulting system wouldn't be too chaotic.
 
 I also added a depth-based fog gradient effect, which I ended up using a lot more throughout the month.
 
@@ -156,7 +156,7 @@ $ <div class="gen-post" id="day-9">
 #### January 9
 @prompt ASCII.
 
-ASCII half-toning as a shader effect! Draws the ASCII value map to a texture. Each tile of the final effect samples its character from this texture based on the brightness.
+ASCII half-toning as a shader effect. Draws the ASCII value-map to a texture. Each tile of the final effect samples the ASCII texture based on the scene's brightness.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#8] [next→-#10]
@@ -166,7 +166,7 @@ $ <div class="gen-post" id="day-10">
 #### January 10
 @prompt Hexagonal.
 
-Did this one a couple days late. I was a good chance to write the cylinder primitive into Gum – which it didn't previously have.
+Did this one a couple days late. It was a good chance to write the cylinder primitive into Gum – which it didn't previously have.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#9] [next→-#11]
@@ -176,7 +176,7 @@ $ <div class="gen-post" id="day-11">
 #### January 11
 @prompt In the style of Anni Albers (1899-1994).
 
-I really wanted to make something that felt woven. It took a lot of fiddling. Animations are sine waves applied in the vertex shader. I added the depth gradient to really exaggerate the over-under.
+I really wanted to make something that felt woven. It took a lot of fiddling. Animations are sine waves applied in the vertex shader. I added the depth gradient to exaggerate the over-under.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#10] [next→-#12]
@@ -186,8 +186,7 @@ $ <div class="gen-post" id="day-12">
 #### January 12
 @prompt Lava lamp.
 
-Metaballs-ish. Spheres drawn in 3D then fed into a box blur + threshold post process shader.
-
+Metaballs-ish. Spheres drawn in 3D then fed into a box blur + threshold post-process shader.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#11] [next→-#13]
@@ -197,7 +196,7 @@ $ <div class="gen-post" id="day-13">
 #### January 13
 @prompt Wobbly function day.
 
-Wobbly function is [Piter Pasma's-https://piterpasma.nl] term for modulated and nested sinusoids. `sin(a + bx + cos(c + dx))` would be an example. This sketch uses 2D dimensions of wobble to drive the rotation of the instanced lines.
+Wobbly function is [Piter Pasma's-https://piterpasma.nl] term for modulated and nested sinusoids. `sin(a + bx + cos(c + dx))` would be an example. This sketch uses 2 dimensions of wobble to drive the rotation of the instanced lines.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#12] [next→-#14]
@@ -218,7 +217,7 @@ $ <div class="gen-post" id="day-15">
 #### January 15
 @prompt Use a physics library.
 
-Got really stubborn on this one and didn't wanna use an external physics library. Ended up staying up til 3am learning about physics solvers and getting a really simple sphere-only Verlet system working. Still really busted with large time steps.
+Stayed up til 3am learning about physics solvers and getting a really simple sphere-only Verlet system working. Still really busted with large time steps.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#14] [next→-#16]
@@ -228,7 +227,7 @@ $ <div class="gen-post" id="day-16">
 #### January 16
 @prompt Draw 10,000 of something.
 
-Like some of the earlier sketches, { [day 4-#4] | [day 13-#13] } this one uses WebGL instancing. 10k spheres whose size is driven by a spherical distance function. All animation in the vertex shader.
+Like some of the earlier sketches, { [day 4-#4] | [day 13-#13] } this one uses WebGL instancing. 10k spheres with size driven by a spherical distance function. All animation in the vertex shader.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#15] [next→-#17]
@@ -252,7 +251,6 @@ $ <div class="gen-post" id="day-18">
 
 It's not even from the Bauhaus, but I really wanted to make something like [this image-https://d2w9rnfcy7mm78.cloudfront.net/682553/original_05b6054a62198e1854b7cefb3f13f1d3.jpeg?1471630506?bc=1] using a depth-modulated spiral effect. It didn't end up being all that effective.
 
-
 @button.small.randomize Randomize
 @small.fade [←prev-#17] [next→-#19] 
 /div
@@ -261,7 +259,7 @@ $ <div class="gen-post" id="day-19">
 #### January 19
 @prompt Flocking.
 
-WOW I love boids!
+I love boids!
 
 @button.small.randomize Randomize
 @small.fade [←prev-#18] [next→-#20]
@@ -271,7 +269,7 @@ $ <div class="gen-post" id="day-20">
 #### January 20
 @prompt Generative typography.
 
-For this one, I made a tiny input tool to define the letters of the uppercase alphabets as bitmaps. Those bitmaps determine where the 3D spheres end up. A dither + outline post-process effect gives the noisy result. Not super readable.
+For this one, I made a tiny input tool that let me define letters as bitmaps. Those bitmaps determine where spheres end up. A dither + outline post-process effect gives the noisy result. Not super readable.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#19] [next→-#21]
@@ -281,7 +279,7 @@ $ <div class="gen-post" id="day-21">
 #### January 21
 @prompt Use a library that you haven’t used before.
 
-Took this chance to explore a few different patters for programming async, tweened animations with Gum. I also added some utilities to get the 2D, screen-space center of a transform to position the labels.
+Took this chance to explore a few different patterns for programming async, tweened animations with Gum. I also added some utilities to get the screen-space center of a transform to position the labels.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#20] [next→-#22]
@@ -291,7 +289,7 @@ $ <div class="gen-post" id="day-22">
 #### January 22
 @prompt Point - line - plane.
 
-Shout out to [Paul Bourke-https://paulbourke.net/] – his collision and intersection code examples have saved my so many times. In this one, near intersections between 3D lines drive the sizes of spheres.
+Shout out to [Paul Bourke-https://paulbourke.net/] – his collision and intersection code examples are so handy. Intersections between 3D lines drive the size of spheres.
 
 I wanted the sketch to feel musical in the way that Kandinsky's (who inspired the prompt) paintings do. 
 
@@ -303,7 +301,7 @@ $ <div class="gen-post" id="day-23">
 #### January 23
 @prompt 8×8.
 
-Satisfying rotation offsets + trails.
+Satisfying rotation offsets with trails.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#22] [next→-#24]
@@ -312,8 +310,6 @@ Satisfying rotation offsets + trails.
 $ <div class="gen-post" id="day-24">
 #### January 24
 @prompt Impossible objects (undecided geometry).
-
-Really mailed it in on this one.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#23] [next→-#25]
@@ -333,8 +329,7 @@ $ <div class="gen-post" id="day-26">
 #### January 26
 @prompt Grow a seed.
 
-L-systems are awesome! This was my first time working directly with L-systems, and was probably the most fun to program of any of the sketches.
-
+L-systems are awesome! This was my first time coding an L-system, and I had the most fun writing this sketch.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#25] [next→-#27]
@@ -344,7 +339,7 @@ $ <div class="gen-post" id="day-27">
 #### January 27
 @prompt Code for one hour. At the one hour mark, you’re done.
 
-Simplex noise layers using [Stefan Gustafson's-https://github.com/stegu/webgl-noise] noise functions.
+Simplex noise stack using [Stefan Gustafson's-https://github.com/stegu/webgl-noise] noise functions.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#26] [next→-#28]
@@ -364,7 +359,7 @@ $ <div class="gen-post" id="day-29">
 #### January 29
 @prompt Signed Distance Functions.
 
-I was so excited to get 2D SDFs going! Added some dithering too.
+I was excited to get 2D SDFs going. Added some dithering too.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#28] [next→-#30]
@@ -374,7 +369,7 @@ $ <div class="gen-post" id="day-30">
 #### January 30
 @prompt Shaders.
 
-Ray-marching 3D SDFs! After the end of the month I spent another 3 or so day's worth of fiddle time trying the ray-marched scene to depth test correctly with the rasterized scene.
+Ray-marching 3D SDFs. After the end of the month I spent another 3 or so day's worth of fiddle time trying to get the ray-marched shape to depth-test correctly with the rasterized sphere.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#29] [next→-#31]
@@ -384,7 +379,7 @@ $ <div class="gen-post" id="day-31">
 #### January 31
 @prompt Generative music / Generative audio / Generative sound.
 
-
+The large sphere moves though a lattice of smaller spheres, triggering notes when it gets close to them. I pulled in [SynthKit-/projects/synthkit] to make the sounds. Working with sound again was so fun that it inspired me to spend most of February refactoring and adding effects to SynthKit.
 
 @button.small.randomize Randomize
 @small.fade [←prev-#30]
