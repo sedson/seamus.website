@@ -14,7 +14,7 @@
 }
 
 :root {
-  font-size: clamp(13px, 1.4vw, 14px);
+  font-size: clamp(13px, 1.5vw, 14px);
   --system: -system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --sans: var(--system), sans-serif;
   --mono: Atlas, var(--system);

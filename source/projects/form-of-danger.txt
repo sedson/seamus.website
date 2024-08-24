@@ -1,0 +1,13 @@
+---
+title: The Form of the Danger
+year: 2024
+type: videogame
+short: Ambient kayaking
+publish: true
+month: 6
+description: An ambient kayaking game with vibes.
+---
+
+div @desc.narrow
+
+[On itch.io-https://sedson.itch.io/form-of-danger]

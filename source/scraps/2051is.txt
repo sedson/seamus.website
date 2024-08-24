@@ -7,5 +7,6 @@ publish: true
 thumbnail: /img/feed/ccnyc_5-7_a.png
 ---
 
-@small Generative poster for the May 7 meetup of Creative Coding NYC. This one uses textures stretched across cells in a quadtree. 
+@small Generative poster for the May 7 meetup of Creative Coding NYC. Textures stretched across cells in a tree.
+
 IMG /img/feed/ccnyc_5-7_a.png

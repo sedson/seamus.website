@@ -1,25 +1,30 @@
 div @narrow.hyphens
 
-I'm Seamus (b. 1995), and this is my website: a place to organize my work and thoughts across programming, design, and art. ~ May 2024.~
+Hi, I'm Seamus. This site is a place to organize my work and thoughts across programming, design, and art. ~ August 2024.~
 
 ## @mt-1 Currently 
-I'm creating tools to make things (sounds, images, games, comics) using the web browser. Right now these tools are suited to my own tastes and curiosities, but I'm hoping to share them with friends very soon. For the last year I've been working on [Gum-/projects/gum] — a mini 3d engine using JavsScript + WebGL and [SynthKit-/projects/synthkit] — a WebAudio wrapper.
+I'm pursuing curiosities and building web-based toys/tools. [Gum-/projects/gum] is a WebGL and JS toolkit for creative coding. [SynthKit-/projects/synthkit] augments the WebAudio API. [Slop-/projects/slop] is a lisp for pictures.
 
 
 ## @mt-1 Recently
 div @flex-row.timeline
+@timeline-date 2024 
+Tinkering and learning with amazing people at the [Recurse Center-https://www.recurse.com/]
+/div
+
+div @flex-row.timeline
 @timeline-date 2021–2024 
-Full-time at [Bitsbox-https://bluprint.bitsbox.com/], where I worked with an amazing small team to bring 3D worlds and games to life on the web.
+Building 3D worlds and games for the browser at [Bitsbox-https://bluprint.bitsbox.com/]
 /div
 
 div @flex-row.timeline
 @timeline-date 2018–2021
-Made ambient viedogames with my friends under the collective name [Rustforms-https://rustforms.net].
+Making ambient viedogames with my friends as [Rustforms-https://rustforms.net]
 /div
 
 div @flex-row.timeline
 @timeline-date 2020 
-Taught graphic design and 3D animation at the Shintaro Akatsu School of Design in Connecticut.
+Teaching design and animation at the Shintaro Akatsu School in Connecticut.
 /div
 
 

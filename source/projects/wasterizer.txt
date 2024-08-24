@@ -1,0 +1,20 @@
+---
+title: Wasterizer
+year: 2024
+type: code
+short: WASM rasterizer
+publish: true
+month: 6
+description: A software rasterizer in WASM 
+---
+
+div @desc.narrow
+The Wasterizer (WASM Rasterizer) is an expirement to scratch a few personal itches and answer some questions for myself.
+
+ol
+- What is the GPU actually doing when it assembled ans rasterizes triangles between the vertex and fragment stages of the pipeline?
+- How does the regular old JavaScript runtime share memory and pass data to the boxed-off chunks of WASM linear memory?
+- What does it feel like to write Rust code for something a little bigger than a tiny project?
+/ol
+
+/div

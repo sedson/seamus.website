@@ -41,7 +41,7 @@ function main() {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-  const res = await fetch('/feed/posts.json');
+  const res = await fetch('/scraps/posts.json');
   data = await res.json();
   main();
   hashChange();

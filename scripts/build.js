@@ -64,8 +64,8 @@ const template = (file) => {
  * @returns {String}
  */
 const getDateFormat = (selectedDate) => {
-  let date = selectedDate ? selectedDate : new Date();
-  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'numeric', day: 'numeric' });
+  let date = selectedDate ?? new Date();
+  return date.toISOString().split('T')[0];
 }
 
 
@@ -153,7 +153,9 @@ function main() {
   }
 
   const projectSort = (a, b) => {
-    return Number(b.year.split('–')[0]) - Number(a.year.split('–')[0]);
+    const yearSort = Number(b.year.split('–')[0]) - Number(a.year.split('–')[0]);
+    const monthSort = Number(b.month ?? 12) - Number(a.month ?? 12);
+    return yearSort + (monthSort / 12);
   }
   // Sort the projects by year.
   projects = projects
@@ -268,44 +270,33 @@ function main() {
 
 
 
-  // Loop over all the projects in source and make pages.
+  // Loop over all the posts in scraps and make pages.
   let posts = [];
   let postsJson = {};
-  let postList = fs.readdirSync('source/feed');
-
-
+  let postList = fs.readdirSync('source/scraps');
 
   for (let fileName of postList) {
+    let post = get('source/scraps/' + fileName);
 
-    let slug = fileName.split('.')[0];
-    let post = get('source/feed/' + fileName);
     if (post.publish === 'false') {
       continue;
     }
-    const date = (new Date(post.timestamp)).toLocaleDateString(undefined, {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
 
-    post.date = date;
-
+    post.date = getDateFormat(new Date(post.timestamp));
     postsJson[post.id] = post;
-
-    const postMarkup = template('post')(post);
-    posts.push(postMarkup);
+    posts.push(template('post')(post));
   }
 
-  write('www/feed/posts.json', JSON.stringify(postsJson, null, 2));
+  write('www/scraps/posts.json', JSON.stringify(postsJson, null, 2));
 
   // ----------------------------------
   // FEED
   // ----------------------------------
-  write('www/feed/index.html', t_page({
-    header: t_header({ nav: getNav('feed') }),
+  write('www/scraps/index.html', t_page({
+    header: t_header({ nav: getNav('scraps') }),
     footer,
     title: 'Seamus Edson - Feed',
-    body: template('feed')({ posts: posts.join('\n'), ...widgets }),
+    body: template('scraps')({ posts: posts.join('\n'), ...widgets }),
   }));
 
   // ----------------------------------

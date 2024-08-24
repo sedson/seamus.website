@@ -7,6 +7,6 @@ thumbnail: /img/feed/noise_egg2.gif
 publish: true
 ---
 
-@small Output for a the [128kb Challenge-https://128kb.vercel.app/]
+@small Exploration for Tim Rodenbroeker's [128kb Challenge-https://128kb.timrodenbroeker.de/]
 IMG @pixels /img/feed/noise_egg2.gif
 

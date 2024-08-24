@@ -8,6 +8,9 @@ publish: true
 
 div @desc.narrow
 A printmaking toy. Wooden blocks can be arranged using a peg-board grid, inked, and printed on a letterpress. The system seeks a balance between the structure of the grid and the looseness of hands-on play.
+
+This was my undergrad studio-art thesis.
+
 /div
 
 IMG @half.grow /img/thesis/thesis1.jpg

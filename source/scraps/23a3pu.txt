@@ -6,5 +6,5 @@ tags:
 publish: true
 thumbnail: /img/feed/ccnyc_4-23_a.png
 ---
-@small Generative poster for the April 23 meetup of Creative Coding NYC.
+@small Generative poster for the April 23 meetup of Creative Coding NYC. Using Gum.
 IMG /img/feed/ccnyc_4-23_a.png
