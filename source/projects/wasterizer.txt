@@ -3,7 +3,7 @@ title: Wasterizer
 year: 2024
 type: code
 short: WASM rasterizer
-publish: true
+publish: false
 month: 6
 description: A software rasterizer in WASM 
 ---

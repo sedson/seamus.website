@@ -1,7 +1,6 @@
 /**
  * @file Build seamus.website.
  */
-
 const fs = require('fs');
 const path = require('path');
 const parseContent = require('./parseContent');
@@ -132,6 +131,12 @@ function main() {
     projects.push(project);
     project.tag = 'a';
 
+    project.sortValue = Number.parseInt(project.year) ?? 2017;
+    project.sortValue += Number(project.month ?? 12) / 12;
+    if (project.publish === 'false') {
+      project.sortValue -= 2000;
+    }
+
     // Just div if not set to publish.
     if (project.publish !== 'true') {
       project.classList = 'inactive';
@@ -153,10 +158,9 @@ function main() {
   }
 
   const projectSort = (a, b) => {
-    const yearSort = Number(b.year.split('–')[0]) - Number(a.year.split('–')[0]);
-    const monthSort = Number(b.month ?? 12) - Number(a.month ?? 12);
-    return yearSort + (monthSort / 12);
+    return b.sortValue - a.sortValue;
   }
+
   // Sort the projects by year.
   projects = projects
     .sort(projectSort)
@@ -319,7 +323,6 @@ function main() {
   }));
 
   console.timeEnd('main');
-
 }
 
 main();

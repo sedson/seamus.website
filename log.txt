@@ -1,3 +1,4 @@
+2024-08-23 move /feed to /scraps, change date format, update wording on home and about
 2024-05-12 fixing various typos
 2024-05-11 sorting sketchbook folders, adding loader to genuary, cleanup unused js
 2024-05-10 update project pages

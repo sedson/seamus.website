@@ -172,7 +172,6 @@ h1, h2, h3, h4 {
 
 h2, h4 {
   font-size: 0.875rem;
-  display: inline-block;
   margin-bottom: 0.25rem;
   opacity: 0.5;
 }
@@ -712,7 +711,6 @@ a.project-card * {
 .sketch-container {
   height: calc(100%);
   display: flex;
-/*  padding: 1rem;*/
   justify-content: center;
 }
 .sketch {
@@ -751,8 +749,6 @@ a.project-card * {
   width: 100%;
   height: 100%;
 }
-
-
 
 
 .narrow { width: calc(2 * var(--col-width)); }
@@ -899,5 +895,21 @@ iframe.hidden {
   0% { transform: translate(-10px) }
   50% { transform: translate(10px) }
   100% { transform: translate(-10px) }
-
+}
+.repo {
+  padding: 0.5rem 2rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 0.5rem;
+}
+.repo::before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--text-color);
+  opacity: 0.1;
+  z-index: -1;
 }

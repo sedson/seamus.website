@@ -4,19 +4,25 @@ const posts = document.querySelectorAll('.gen-post');
 const btns = document.querySelectorAll('.randomize');
 
 const frame = document.createElement('iframe');
+
 frameContainer.append(frame);
 
 
 function loadPage(i) {
   frame.remove();
   frame.classList.add('hidden');
-  frame.src = `https://files.seamus.website/genuary/pages/${i}.html`;
+
+  // currently, iframe is served from cloudflare pages.
+  frame.src = `https://genuary2024.pages.dev/pages/${i}.html?noinfo`;
+
   frameContainer.append(frame);
   document.querySelector('.sketch-number').innerText = `( ${i} )`;
 
-
   frame.onload = () => {
     frame.classList.remove('hidden');
+    console.log(frame.contentWindow);
+    frame.contentWindow.document.body.classList.add('in-iframe');
+
   }
 }
 

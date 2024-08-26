@@ -10,15 +10,16 @@ description: JavaScript and WebGL library for games and creative coding.
 ---
 
 div @desc.narrow.hyphens
-Gum is a small library for creating browser-based visuals and games with JavaScript and WebGL.
 
+Gum is a 3D-first library for creative coding and small games. (JS and WebGL)
+@repo [Repo-https://github.com/sedson/gum]
 
-## Some Features 
+## Some Features
 ul
 - Mesh primitives — uvsphere, icosphere, plane, cube, cylinder, cone
 - Scene graph
-- Mesh loading — .ply + .gltf
-- Abstraction for WebGL instanced drawing
+- Mesh loading — .ply
+- WebGL instancing
 - Math, color, and texture utilities
 /ul
 
@@ -27,15 +28,11 @@ I've been working on Gum (slowly) since early 2023. I've been using it as my mai
 ## Next Steps
 ul
 - Scene serialization/deserialization
-- Documentation 
-- Clean up Vector and Matrix classes
+- Documentation
 - 2D drawing utilities
 /ul
 
-
-
 /div
-
 $ <canvas id="canvas" class="narrow grow" style="border: 1px solid var(--text-color)"></canvas>
 $ <script type="text/javascript" src="/js/gum.min.js" defer></script>
 $ <script type="text/javascript" src="/js/demo.js" defer></script>

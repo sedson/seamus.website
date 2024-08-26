@@ -1,0 +1,14 @@
+---
+title: SLOP
+year: 2024
+type: code
+short: lisp pix
+publish: false
+month: 8
+description: A silly Lisp for pictures
+---
+
+div @desc.narrow
+A silly Lisp for pictures
+
+@repo [Repo-https://github.com/sedson/slop]

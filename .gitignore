@@ -1,3 +1,5 @@
 .DS_Store
 www/
 /graveyard
+*.sublime-project
+*.sublime-workspace
