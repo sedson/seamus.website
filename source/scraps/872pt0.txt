@@ -6,7 +6,8 @@ tags: gum 3d generative
 thumbnail: /img/feed/noise_egg2.gif
 publish: true
 ---
+@small Exploration for Tim Rodenbroeker's [128kb 
 
-@small Exploration for Tim Rodenbroeker's [128kb Challenge-https://128kb.timrodenbroeker.de/]
+Challenge-https://128kb.timrodenbroeker.de/]
+
 IMG @pixels /img/feed/noise_egg2.gif
-

@@ -1,0 +1,11 @@
+---
+id: 3r31gf
+timestamp: Wed Jun 12 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: Cloth
+tags: svg 
+publish: true
+thumbnail: /img/feed/cloth.png
+---
+
+@small Playing with springs and svg rendering.
+IMG /img/feed/cloth.png

@@ -1,0 +1,11 @@
+---
+id: 20o38d
+timestamp: Tue May 28 2024 00:00:00 GMT-0400 (Eastern Daylight Time)
+title: CCNYC Graphic
+tags:
+publish: true
+thumbnail: /img/feed/ccnyc_5-28.png
+---
+
+@small Poster for the May 28 meetup of Creative Coding NYC. Using Gum.
+IMG /img/feed/ccnyc_5-28.png
