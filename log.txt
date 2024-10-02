@@ -1,3 +1,4 @@
+2024-09-09 use rgb(from ...) syntax for color fades
 2024-08-26 update project order logic, fix genuary iframe
 2024-08-23 move /feed to /scraps, change date format, update wording on home and about
 2024-05-12 fixing various typos

@@ -62,7 +62,6 @@ class DuotoneImage extends HTMLElement {
 
   connectedCallback() {
     this.fetchSrc();
-    console.log(this.getAttribute('maintain-brightness'))
     document.addEventListener('palette-change', () => this.render());
   }
 
@@ -89,9 +88,6 @@ class DuotoneImage extends HTMLElement {
     let fg = this.parseRgb255(getComputedStyle(document.body).getPropertyValue('color'));
     let bg = this.parseRgb255(getComputedStyle(document.body).getPropertyValue('background-color'));
 
-    // const fg = this.parseHex(getComputedStyle(document.body).getPropertyValue('--black'));
-    // const bg = this.parseHex(getComputedStyle(document.body).getPropertyValue('--sand'));
-
     if (this.maintainBrightness) {
       if (this.brightness(fg) > this.brightness(bg)) {
         let swap = fg;
@@ -102,7 +98,6 @@ class DuotoneImage extends HTMLElement {
 
     if (this.useAccent) {
       fg = this.parseHex(getComputedStyle(document.body).getPropertyValue('--accent-color'));
-      console.log('NICE', fg, getComputedStyle(document.body).getPropertyValue('--accent-color'))
     }
 
     const data = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
