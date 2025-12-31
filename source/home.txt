@@ -2,7 +2,7 @@ div @narrow.hyphens
 
 *Seamus Edson*
 
-Computer artist and programmer living in New York. Interested in generative systems, 3D graphics, personal software, drawing, and the web.
+Computer programmer living in New York. Interested in generative systems, 3D graphics, personal software, drawing, and the web.
 
 ul @site-map
 - [about-/about] <br> info and links
