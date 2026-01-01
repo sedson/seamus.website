@@ -1,3 +1,4 @@
+2025-12-31 add flex fix to project card
 2025-12-31 lil css and content fixes
 2024-10-02 remove console.log from duotone component
 2024-09-09 use rgb(from ...) syntax for color fades

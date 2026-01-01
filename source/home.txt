@@ -7,7 +7,7 @@ Computer programmer living in New York. Interested in generative systems, 3D gra
 ul @site-map
 - [about-/about] <br> info and links
 - [projects-/projects] <br> index of larger projects
-- [scraps-/scraps] <br> ideas, scraps, works in progress
+// - [scraps-/scraps] <br> ideas, scraps, works in progress
 - [sketchbook-/sketchbook] <br> physical sketchbook scans
 /ul
 
