@@ -3,7 +3,7 @@ div @narrow.hyphens
 ## Currently
 div @flex-row.timeline
 @timeline-date 2024–
-Software engineer at [Marco-https://macro.com]
+Software engineer at [Macro-https://macro.com]
 /div
 
 ## @mt-1 Recently
