@@ -99,6 +99,14 @@ footer {
     }
 }
 
+/* Palette change repaint kick for iOS Safari — toggling .palette-tick on
+   <html> alternates the transform on fixed layers so they redraw with the
+   new --text-color / --page-color values. */
+:root.palette-tick header,
+:root.palette-tick footer {
+    transform: translateZ(0);
+}
+
 a {
     color: unset;
     text-decoration-thickness: 1px;

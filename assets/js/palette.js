@@ -108,4 +108,10 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('reset-colors').onclick = resetColors;
 });
 
+// iOS Safari doesn't reliably repaint fixed-position layers when :root custom
+// properties change. Toggling a class on <html> nudges those layers to redraw.
+document.addEventListener('palette-change', () => {
+  document.documentElement.classList.toggle('palette-tick');
+});
+
 loadColors();
