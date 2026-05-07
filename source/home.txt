@@ -2,13 +2,15 @@ div @narrow.hyphens
 
 *Seamus Edson*
 
-Computer programmer living in New York. Interested in generative systems, 3D graphics, personal software, drawing, and the web.
+Computer programmer living in New York.
+
+Interterested in 3D graphics, personal software, web APIs, drawing, running, cooking.
 
 ul @site-map
-- [about-/about] <br> info and links
-- [projects-/projects] <br> index of larger projects
-// - [scraps-/scraps] <br> ideas, scraps, works in progress
-- [sketchbook-/sketchbook] <br> physical sketchbook scans
+- [about-/about]
+- [projects-/projects]
+// - [scraps-/scraps]
+- [sketchbook-/sketchbook]
 /ul
 
 
