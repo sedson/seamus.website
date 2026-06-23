@@ -1,0 +1,8 @@
+#!/bin/sh
+# Regenerate log.txt from full git history so it stays canonical across
+# devices. log.txt records commits up to HEAD; the commit being made will
+# appear in log.txt on the next commit.
+set -e
+git log --pretty=format:"%ad %s" --date=short > log.txt
+printf '\n' >> log.txt
+git add log.txt

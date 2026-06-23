@@ -4,8 +4,6 @@ div @narrow.hyphens
 
 Computer programmer living in New York.
 
-Interterested in 3D graphics, personal software, web APIs, drawing, running, cooking.
-
 ul @site-map
 - [about-/about]
 - [projects-/projects]

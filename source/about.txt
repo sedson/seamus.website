@@ -9,12 +9,12 @@ Software engineer at [Macro-https://macro.com]
 ## @mt-1 Recently
 div @flex-row.timeline
 @timeline-date 2024
-Tinkering and learning at the [Recurse Center-https://www.recurse.com/]
+Tinkering at the [Recurse Center-https://www.recurse.com/]
 /div
 
 div @flex-row.timeline
 @timeline-date 2021–2024
-Building 3D worlds and games at [Bitsbox-https://bluprint.bitsbox.com/]
+Building 3D browser games at [Bitsbox-https://bluprint.bitsbox.com/]
 /div
 
 div @flex-row.timeline
